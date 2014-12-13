@@ -22,31 +22,49 @@ module AresMUSH
       end
       
       def handle
-        game = ServerInfo.all.select { |g| g.name.upcase == self.name.upcase }.first
-        if (game.nil?)
+        games = ServerInfo.all.select { |g| g.name.upcase == self.name.upcase }
+        
+        if (games.empty?)
           client.emit_failure t('api.game_not_found')
           return
         end
         
-        text = t('api.game_name', :name => game.name)
+        text = ""
+        games.each { |g| show_game(g, text) }
+        client.emit BorderedDisplay.text text, t('api.games_title')
+      end
+      
+      def show_game(game, text)
+        text << "%l2%r"
+        
+        if (!game.is_open?)
+          text << "%xh%xr"
+          text << t("api.game_not_open")
+          text << "%xn%R%R"
+        end
+
+        text << t('api.game_name', :name => game.name)
         text << "%R"
         text << t('api.game_address', :host => game.host, :port => game.port)
         text << "%R"
         text << t('api.game_category', :category => game.category)
-        text << "%R"
 
-        last_ping = OOCTime.local_long_timestr(client, game.last_ping)        
-        if (Time.now - game.last_ping < 86400)
-          status = t('api.game_up_status')
-        else
-          status = t('api.game_down_status')
+        if (!game.is_master?)
+          last_ping = OOCTime.local_long_timestr(client, game.last_ping)        
+          if (Time.now - game.last_ping < 86400)
+            status = t('api.game_up_status')
+          else
+            status = t('api.game_down_status')
+          end
+        
+          text << "%R"
+          text << t('api.game_status', :status => status, :last => last_ping)
         end
         
-        text << t('api.game_status', :status => status, :last => last_ping)
         text << "%r%r"
         text << game.description
         
-        client.emit BorderedDisplay.text text, t('api.games_title')
+        text << "%r"
       end
     end
   end

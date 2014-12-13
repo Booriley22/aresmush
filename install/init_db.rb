@@ -56,8 +56,10 @@ module AresMUSH
       AresMUSH::ServerInfo.create(
       game_id: AresMUSH::ServerInfo.arescentral_game_id,
       name: "AresCentral", 
+      category: "Social",
       description: "Central hub for all things AresMUSH-related.", 
       host: "mush.aresmush.com",
+      game_open: "yes",
       port: 7206)
     
       puts "Creating channels and BBS."

@@ -1,3 +1,172 @@
+Below are the following rules that all on the game must abide by.
+
+Golden Rule
+
+Follow the Golden Rule: Be Nice
+
+That should be self-explanatory. But in case it isn't clear, here is a list of examples (which is far from comprehensive) of what this policy means:
+
+Do not insult, berate, or otherwise mistreat others.
+Passive-aggressive behavior will not be tolerated.
+Keep your language civil. The moment harsh words are introduced (especially when directed toward or spoken about another person), it changes the tone of conversation, regardless of intent.
+Jokes and comments that poke fun at race, religion, sexual-orientation, lifestyle choices, etc. are not welcome here.
+Do not discuss the "Verboten Three" (religion, politics, and Twilight…no, seriously) on public channels. They always end with someone getting their feelings hurt.
+Do not harass or bully staff to try to get your way. We don't get paid for this. There's very little incentive to put up with abusive players.
+Never try to use "I'm just that kind of person" as a defense for hostility or unkindness toward others. If you are that incapable of controlling your impulses to mistreat others, then this isn't the place for you.
+Again, let us stress that this list is not comprehensive, nor do we intend to create a comprehensive list of violations. All players are expected to conduct themselves with civility toward others. It isn't difficult to know what this means.
+
+If you feel that you have been mistreated by another player or Staff, either handle it privately and maturely with them, or bring it to staff attention privately. Under no circumstances should any issue become a public condemnation of an individual, no matter what insult you believe they are guilty of. Period. There is no room for argument in this. Don't make yourself part of the problem. Work with us to fix it.
+
+Disciplinary Action
+
+We don't like putting on the admin hats and disciplining. But sometimes it has to happen, for the sake of maintaining a positive community environment. Breaking the Golden Rule is grounds for being asked to leave the game. To reiterate for emphasis:
+
+Breaking the Golden Rule can lead to being banned from Aftermath.
+
+This doesn't mean you will be kicked out for slipping up once. Every case will be handled individually. Staff is not going to remove someone from the game for having a bad day. But if it becomes clear that a player is incapable of maintaining a basic level of decency toward fellow human beings, that player will be removed for the health of the community. This decision is entirely at staff's discretion, and would never be made lightly. All that is asked is that people treat each other with respect, and not to air grievances publicly. These are easy standards to live up to.
+
+Apologies
+
+Sure, people slip up. Even we do. But an apology can go a long way toward making things better. Don't wait for us to prompt you to apologize if you've broken the rules. Take the initiative, tell those you've wronged that you're sorry. You'll feel better, they'll feel better, and we'll feel better.
+
+%l1
+Consent
+
+This is a non-consent game. IC Actions = IC Consequences.
+
+However, we encourage cooperation among both players and staff, as you would find on a consent game. So when conflict arises:
+
+1. Work it out amongst yourselves so everyone has fun.
+2. Use the +roll system to resolve disputes fairly.
+3. Contact staff to mediate if you can't work it out.
+
+Don't be afraid to "lose." A setback or defeat can be a wonderful opportunity for character development and a great story twist.
+
+We don't take character death/loss lightly and will try to work with you rather than against you.
+
+%l1
+Rating
+
+You must be at least 18 years old to play here. We do not wish to deal with the liability of having underage players around.
+
+Adapting the ratings from TV Parental Guidelines as it applies to the MUSH:
+
+Mature Audiences Only
+This game is specifically designed to be played by adults and therefore may be unsuitable for children under 17. Roleplay may contain one or more of the following: crude indecent language, adult situations, or graphic violence.
+
+Sexual RP
+
+When it comes to RPing sexual themes, there are a few basic rules to follow:
+
+No character below the age of 16 will be involved in sexual conduct.
+No character below the age of 14 will be involved in deep kissing, heavy petting, etc.
+Any request to stop sexually-charged RP or to "fade to black" must be immediately respected.
+The rest is just common sense. This is not a sex game. Sex may happen, as part of mature role-play between responsible RL adults, but it is not a major theme of the game. We do not want to come off as a place to come to get cybered.
+
+%l1
+Plots
+
+Player-Run Plots
+
+You are free — and very much encouraged — to run your own plots. Staff is here to help if needed, but you don't need to ask permission for every little thing.
+
+There are only two rules:
+
+Keep it within our theme/plausibility. Plots that make you say: "Inconceivable!" are really not what we're looking for here. If in doubt, just ask.
+Don't make drastic changes to the world or to other players' stuff without asking first. For example: Having a plot involving a fire is fine. Burning down someone else's place or the whole block? Ask first.
+For more detailed guidelines, see Player-Run Plots.
+
+If you have an idea for a personal plot or something you want to run and aren't sure how to go about it, staff is glad to help. Just +request.
+
+%l1
+Staff-Run Plots
+
+Giant pre-scheduled plots are few and far between. What you'll find more of are plot hooks dropped throughout RP and bbposts, or staff NPCs/PCs going around stirring up trouble. If you see a hook and want to get involved, but aren't sure how, just ask!
+
+When things do happen, it's more likely to be spontaneous. So folks who are often about and RPing are more likely to stumble into Plot than someone sitting idle in OOC-land waiting for a +event.
+
+%l1
+Characters
+
+All characters, whether created from scratch or claimed from the roster, are subject to approval by Staff. Please review game policies and the Character Creation Guide wiki page to make your approval process as smooth and fast as possible.
+
+Alts
+
+Alts are "alternate characters." All alts are public and must be registered with +alts. Failure to register your alts can result in disciplinary action.
+
+Alts may not be characters that are directly linked to another character of the same player. For instance, family members, business associates, close friends, etc. This means that a player may not have more than one character in a given organization (e.g. the Iron Brigade, the Sheriff's Office, a particular business, etc.).
+
+Obviously, there may be cases in which alts might be brought together by IC events during role-play, and in a small community such as Myrtle Valley, it's expected that there may be some casual contact. But it is expected that players will try to avoid these circumstances.
+
+Beyond those restrictions you may play as many alts as you feel you can keep active. Please see the Idling policy below.
+
+%l1
+Idling
+
+We aggressively sweep for idle players to free up roles, names, and Actors for new characters. A character is considered idle if they have not logged in for three months or more or if they log in but do not actively RP — especially if that lack of RP is impacting other players.
+
+Characters who are approaching idle-out are warned via the Announcements bulletin board. This gives a few days for friends to poke someone elseMU or otherwise drag them back. Characters may receive more than one warning if they have given advance notice of their absence or if they have contributed actively to the game. This is entirely at staff's discretion.
+
+The fate of idled-out characters is also at staff's discretion. You may be turned into an NPC, placed on the roster, killed off, or otherwise written out of the story. However, we do take into account the wishes of the player and any other players impacted by the character's departure. If you would like to register a preference on what happens if you ever idle out, use the "LASTWILL" field.
+
+Examples:
+&LASTWILL me=Place me on the roster.
+&LASTWILL me=Have me wander into the wilderness and get mauled by a bear.
+&LASTWILL me=Make me So-and-So's NPC.
+
+Characters that idle when still in character generation will be nuked. Similarly, if we discover than any character has been in character generation for longer than 30 days, it may be nuked. At the very least, such a character will have its Actor cleared and made available for others' use.
+
+%l1
+NPCs
+
+A game without NPCs is like a movie without extras. Players are encouraged to remember that there are other people in the public areas, and that just because a PC doesn't do something, that doesn't mean a NPC won't.
+
+Community NPCs are fair game for anyone to emit as needed.
+
+Sometimes players will create personal NPCs — their character's family, employees, etc. Exercise discretion when using these personal NPCs, and don't do anything drastic to them without consulting their 'owner'.
+
+%l1
+Building
+
+You may use an RP room for places not represented on grid, or submit a +request to have them built. Players may not build rooms themselves, but are more than welcome to submit descriptions for new locales.
+
+Staff's philosophy is "If you come, we will build it." Homes, businesses, etc. will get one room by default, and can add more if staff sees a lot of RP going on there.
+
+%l1
+Coding
+
+We understand that some people don't care for PennMU. It frustrates us sometimes, too. But adding code to characters, objects, and rooms causes database bloat and creates potential confusion down the road. In light of this, do not add personal code to the game.
+
+Some leeway may be given with staff permission. If you're wondering if doing something with code would be alright, contact staff. But for the most part, if examples of the above are found, the objects will be destroyed and the code wiped.
+
+%l1
+Staff Ethics
+
+Staff is bound by the same Golden Rule as players.
+
+We strive for transparency and fairness.
+
+We will not spy on players.
+
+Our alts will be public in our +finger, and it will be readily apparent who we are.
+
+We are always open to constructive criticism and feedback. Nobody's perfect. If we mess up, we want to know about it so we can fix it.
+
+%l1
+RP Etiquette
+
+There is no universal code of conduct for MUSHes. Everyone has their own expectations for what is considered polite/rude based on their own values and experiences. Here are some things we encourage from our players. They are not hard and fast rules.
+
+Ask before joining a scene in progress.
+When joining a scene, ask for a current "set." If you have questions about something not stated (e.g. weather), inquire about it before assuming anything.
+If someone asks to join a scene, try to find a way to work them in if you can.
+Try to make sure that you don't ignore someone who's interacting with you. Or make sure it's clear the ignoring or slight is IC.
+If you really want a private scene, use an RP or more private room.
+Avoid 'lurking' to watch a scene that you are not a part of unless you know the people pretty well. It sometimes creeps folks out.
+If you are speedwalking through a room with other players, a simple OOC "Just passing through!" is polite.
+We aim for OOC transparency here, but that does not given anyone the right to give their characters information obtained via posted logs, character backgrounds, or any other OOC means. Keep a clear distinction between what you know OOC, and what your character knows IC.
+Ask before posting logs containing sensitive/private IC information.
+Note: Staff-run logs will automatically be posted so everyone knows what's going on. If you do not want something posted, we can discuss it.
 By playing here, you must adhere to these terms of service:
     - Oops there actually aren't any. 
 Please customize your terms of service, or remove the terms_of_service

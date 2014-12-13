@@ -3,3 +3,12 @@ names:
     restricted:
         - me
         - here
+        - north
+        - south
+        - east
+        - west
+        - northeast
+        - northwest
+        - southeast
+        - southwest
+        - look

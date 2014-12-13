@@ -1,19 +1,19 @@
 server:
     # The host name for your game.
-    hostname: localhost
+    hostname: mush.aresmush.com
 
     # The port number your game will listen on
-    port: 7207
+    port: 2013
     
     # Name of your game.
-    name: AresTest
+    name: Aftermath
 
     # Please select the appropriate category to describe your game:
     # "Historical", "Sci-Fi", "Fantasy", "Modern", "Supernatural", "Social", "Other"
-    category: Social
+    category: Sci-Fi
     
     # Describe your game.  You may use ansi and other MUSH formatting codes (%r, etc.).
-    description: Test site.
+    description: Aftermath is a story of survival set in the fictional Oregon town of Myrtle Valley, which weathered a cataclysm, but has been largely cut off from the rest of the world. A tale of the daily lives of the town's residents, struggling to survive and keep their haven safe against the new dangers of a world gone mad.
     
     # Your game's website
-    website: www.aresmush.com
+    website: aftermathmush.wikidot.com

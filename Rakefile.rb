@@ -9,7 +9,7 @@ require 'mongoid'
 require_relative 'install/init_db.rb'
 require_relative 'install/configure_game.rb'
 
-task :start do
+task :startares do
   bootstrapper = AresMUSH::Bootstrapper.new
   bootstrapper.command_line.start
 end
@@ -51,6 +51,23 @@ begin
   end
 rescue LoadError
   # no rspec available
+end
+
+
+# Generate documentation
+require 'rdoc/task'
+
+RDoc::Task.new do |rdoc|
+  rdoc.rdoc_dir = 'rdoc'
+  rdoc.main = "README.doc"
+  
+  plugin_files = AresMUSH::PluginManager.plugin_files
+  templates = plugin_files.select { |f| f =~ /template/ }
+  
+  
+  rdoc.rdoc_files = templates
+#  rdoc.rdoc_files.include("game/plugins/**/*.rb")
+#  rdoc.rdoc_files.exclude("^((?!Template).)*$")
 end
 
 task :default => 'spec:unit'

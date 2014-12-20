@@ -10,7 +10,7 @@ Do not insult, berate, or otherwise mistreat others.
 Passive-aggressive behavior will not be tolerated.
 Keep your language civil. The moment harsh words are introduced (especially when directed toward or spoken about another person), it changes the tone of conversation, regardless of intent.
 Jokes and comments that poke fun at race, religion, sexual-orientation, lifestyle choices, etc. are not welcome here.
-Do not discuss the "Verboten Three" (religion, politics, and Twilight…no, seriously) on public channels. They always end with someone getting their feelings hurt.
+Do not discuss the "Verboten Three" (religion, politics, and Twilight - no, seriously) on public channels. They always end with someone getting their feelings hurt.
 Do not harass or bully staff to try to get your way. We don't get paid for this. There's very little incentive to put up with abusive players.
 Never try to use "I'm just that kind of person" as a defense for hostility or unkindness toward others. If you are that incapable of controlling your impulses to mistreat others, then this isn't the place for you.
 Again, let us stress that this list is not comprehensive, nor do we intend to create a comprehensive list of violations. All players are expected to conduct themselves with civility toward others. It isn't difficult to know what this means.
@@ -68,7 +68,7 @@ Plots
 
 Player-Run Plots
 
-You are free — and very much encouraged — to run your own plots. Staff is here to help if needed, but you don't need to ask permission for every little thing.
+You are free - and very much encouraged - to run your own plots. Staff is here to help if needed, but you don't need to ask permission for every little thing.
 
 There are only two rules:
 
@@ -103,7 +103,7 @@ Beyond those restrictions you may play as many alts as you feel you can keep act
 %l1
 Idling
 
-We aggressively sweep for idle players to free up roles, names, and Actors for new characters. A character is considered idle if they have not logged in for three months or more or if they log in but do not actively RP — especially if that lack of RP is impacting other players.
+We aggressively sweep for idle players to free up roles, names, and Actors for new characters. A character is considered idle if they have not logged in for three months or more or if they log in but do not actively RP - especially if that lack of RP is impacting other players.
 
 Characters who are approaching idle-out are warned via the Announcements bulletin board. This gives a few days for friends to poke someone elseMU or otherwise drag them back. Characters may receive more than one warning if they have given advance notice of their absence or if they have contributed actively to the game. This is entirely at staff's discretion.
 
@@ -123,7 +123,7 @@ A game without NPCs is like a movie without extras. Players are encouraged to re
 
 Community NPCs are fair game for anyone to emit as needed.
 
-Sometimes players will create personal NPCs — their character's family, employees, etc. Exercise discretion when using these personal NPCs, and don't do anything drastic to them without consulting their 'owner'.
+Sometimes players will create personal NPCs - their character's family, employees, etc. Exercise discretion when using these personal NPCs, and don't do anything drastic to them without consulting their 'owner'.
 
 %l1
 Building

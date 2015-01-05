@@ -35,23 +35,24 @@ module AresMUSH
           suspect = result.target
           ip = suspect.last_ip
           hostname = suspect.last_hostname[0..10]
-          title = "#{title}%r#{t('manage.findsite_player_info', :ip => ip, :hostname => hostname)}"
         else
-          ip = self.target
-          hostname = self.target
+          if (self.target[0].is_integer?)
+            ip = self.target
+            hostname = Resolv.getname self.target
+          else
+            hostname = self.target
+            ip = Resolv.getaddress self.target
+          end
         end
+
+        title = "#{title}%r#{t('manage.findsite_player_info', :ip => ip, :hostname => hostname)}"
         
-        matches = Character.all.select { |c| is_match?(c, ip, hostname) }
+        matches = Character.all.select { |c| c.is_site_match?(ip, hostname) }
         found = matches.map { |m| "#{m.name.ljust(25)} #{m.last_ip} #{m.last_hostname}" }
         
         client.emit BorderedDisplay.list found, title
       end
       
-      def is_match?(char, ip, hostname)
-        return true if char.last_ip.include?(ip[0..7])
-        return true if char.last_hostname.include?(hostname[0..7].downcase)
-        return false
-      end
     end
   end
 end

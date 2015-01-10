@@ -39,6 +39,13 @@ module AresMUSH
         @room.description
       end
       
+      # Available detail views.
+      def details
+        names = @room.details.keys
+        return "" if names.empty?
+        "%R%R%xh#{t('describe.details_available')}%xn #{names.sort.join(", ")}"
+      end
+      
       # Short IC date/time string
       def ic_time
         ICTime.ic_datestr ICTime.ictime
@@ -103,9 +110,10 @@ module AresMUSH
       # Exit destination
       # Requires an exit reference.  See 'exits' for more info.
       def exit_destination(e)
-        left(e.dest.name, 30)
+        locked = e.allow_passage?(@client.char) ? "" : "%xr*#{t('describe.locked')}*%xn "
+        str = "#{locked}#{e.dest.name}"
+        left(str, 30)
       end
-        
     end
   end
 end

@@ -12,18 +12,18 @@ status:
         OOC: "%xh"
         AFK: "%xy"
         NEW: "%xg"
-        ADM: "%xb"
+        ADM: "%xm"
         
     afk:
         # How many minutes before someone is considered idle.  Unlike AFK, this is not
         # a deliberate setting, but just a way certain systems can warn that someone has
         # been idle awhile.
         # Comment out to disable this feature.
-        minutes_before_idle: 120
+        #minutes_before_idle: 120
         
         # How many minutes before someone is automatically logged out for inactivity.
         # Comment out to disable this feature.
-        minutes_before_idle_disconnect: 720
+        #minutes_before_idle_disconnect: 720
         
         # Set up when you want the AFK cron job to run.  See the 'cron' tutorial on the website for details.
         # Comment out any items you aren't using; don't just leave them blank.

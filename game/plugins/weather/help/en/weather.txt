@@ -1,0 +1,3 @@
+The weather command displays the current weather in game.
+
+     %xcweather%xn

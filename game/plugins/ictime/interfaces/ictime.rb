@@ -11,5 +11,10 @@ module AresMUSH
     def self.ic_datestr(time)
       time.strftime Global.config["date_and_time"]["short_date_format"]
     end
+
+    # Used in certain places where you want to display the full IC date and time
+     def self.ic_long_datestr(time)
+      time.strftime Global.config["date_and_time"]["long_date_format"]
+    end
   end
 end

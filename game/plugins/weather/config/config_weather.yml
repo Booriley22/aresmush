@@ -1,0 +1,7 @@
+# This is file for in game weather.
+weather:
+    # Here is your config option.  Don't forget to indent!  Indentation is super important in YAML files.
+    spring: "%xh%xgIt is the spring season."
+    summer: "%xh%xrIt is the summer season."
+    autumn: "%xrIt is the autumn season."
+    winter: "%xh%xcIt is the winter season."

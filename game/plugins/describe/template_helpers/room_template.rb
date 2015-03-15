@@ -52,7 +52,7 @@ module AresMUSH
       
       # Short IC date/time string
       def ic_time
-        ICTime.ic_datestr ICTime.ictime
+        ICTime.ic_long_datestr ICTime.ictime
       end
       
       # Room area
@@ -62,12 +62,13 @@ module AresMUSH
       
       # Room grid coordinates, e.g. (1,2)
       def grid
-        "(#{@room.grid_x},#{@room.grid_y})"
+      text = "( %xh%xr#{@room.grid_x}%xn,%xh%xr#{@room.grid_y}%xn )"
+      right( text, 34 )
       end
-      
+
       # OOC date/time string
       def ooc_time
-        OOCTime.local_long_timestr(@client, Time.now)
+        OOCTime.local_short_timestr(@client, Time.now)
       end
       
       def foyer_exits

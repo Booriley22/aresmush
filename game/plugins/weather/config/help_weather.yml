@@ -1,0 +1,9 @@
+help:
+    categories:
+        main:
+            topics:
+                weather: 
+                    toc_topic: Admin
+                    dir: 'game/plugins/weather/help/'
+                    file: 'weather.txt'
+                    summary: "Command to see the in game weather."

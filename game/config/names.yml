@@ -12,3 +12,5 @@ names:
         - southeast
         - southwest
         - look
+        - connect
+        - quit

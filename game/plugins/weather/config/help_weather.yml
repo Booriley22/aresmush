@@ -3,7 +3,14 @@ help:
         main:
             topics:
                 weather: 
-                    toc_topic: Admin
+                    toc_topic: 'Misc'
                     dir: 'game/plugins/weather/help/'
                     file: 'weather.txt'
-                    summary: "Command to see the in game weather."
+                    summary: 'Viewing the weather.'
+        admin:
+            topics:
+                weather: 
+                    toc_topic: 'Game Management'
+                    dir: 'game/plugins/weather/help/'
+                    file: 'admin_weather.txt'
+                    summary: 'Managing the weather.'

@@ -66,6 +66,11 @@ module AresMUSH
       right( text, 34 )
       end
 
+      def weather
+         w = Weather.weather_for_area(@room.area)
+         w ? "#{w}%R" : ""
+      end
+      
       # OOC date/time string
       def ooc_time
         OOCTime.local_short_timestr(@client, Time.now)

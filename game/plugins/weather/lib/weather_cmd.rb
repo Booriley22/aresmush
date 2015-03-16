@@ -1,10 +1,11 @@
 module AresMUSH
+
   module Weather
     class WeatherCmd
       include Plugin
       include PluginRequiresLogin
       include PluginWithoutArgs
-           
+            
       def want_command?(client, cmd)
         cmd.root_is?("weather") && cmd.switch.nil?
       end
@@ -18,6 +19,7 @@ module AresMUSH
           list << "%xh#{name}:%xn%r#{weather}"
         end
         client.emit BorderedDisplay.text list.join("%R%R")
+      end
     end
   end
 end

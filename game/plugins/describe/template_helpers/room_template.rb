@@ -68,7 +68,7 @@ module AresMUSH
 
       def weather
          w = Weather.weather_for_area(@room.area)
-         w ? "#{w}%R" : ""
+         w ? center("#{w}%R%l2%r",80) : ""
       end
       
       # OOC date/time string

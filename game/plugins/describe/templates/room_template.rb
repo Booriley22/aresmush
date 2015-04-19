@@ -13,6 +13,7 @@ module AresMUSH
         text = header_display()
         text << "%r%l2%r"
         text << desc_display()
+        text << roomwiki_display()
         text << "%r%l2%r"
         text << players_display()
         text << "%r%r"
@@ -166,7 +167,11 @@ module AresMUSH
       def char_shortdesc(char)
         char.shortdesc ? " - #{char.shortdesc}" : ""
       end
-      
+
+      def roomwiki_display
+        @room.roomwiki ? "%R#{center(@room.roomwiki, 80)}" : ""
+      end
+    
       # Shows the AFK message, if the player has set one, or the automatic AFK warning,
       # if the character has been idle for a really long time.
       def char_afk(char)

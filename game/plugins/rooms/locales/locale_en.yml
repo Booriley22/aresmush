@@ -30,6 +30,8 @@ en:
        grid_cleared: "You clear the room's grid coordinates."
        roomwiki_set: "You have set this room's wiki page."
        roomwiki_cleared: "You have wiped this room's wiki page clear."
+       zone_set: "You have set the zoning of this room."
+       zone_cleared: "You have cleared the zoning of this room."
        
        invalid_room_type: "Invalid room type. Try one of these: %{types}."
        room_type_set: "You set the room type."

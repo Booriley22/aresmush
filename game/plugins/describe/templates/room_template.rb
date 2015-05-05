@@ -25,7 +25,7 @@ module AresMUSH
       
       def header_display
         text = "%l1%r"
-        text << "#{name} #{area}%r"
+        text << "#{zone_color(@room)}#{name}%xn #{area}%r"
         text << "#{ic_time} %x190~%xn %xh%xx(( #{ooc_time} )) %xn#{grid}"
 
         text
@@ -43,27 +43,21 @@ module AresMUSH
       end
       
       def players_display
-        text = "%xg#{t('describe.players_title')}%xn"
-        online_chars.each do |c|
-          text << "%r%xh#{char_name(c)}%xn"
-          text << " "
-          text << char_shortdesc(c)
-          text << " "
-          text << char_afk(c)
-        end
+        text = "%xg#{t('describe.players_title')}%xn "
+        text << online_chars.map { |c| "%xh#{char_name(c)}%xn#{char_afk(c)}" }.join(", ")
         
         text
       end
       
       def exits_display
-        text = "%xg#{t('describe.exits_title')}%xn"
+        text = "%xh%xy#{t('describe.exits_title')}%xn"
         exits.each_with_index do |e, i|
             
           # Linebreak every 2 exits.
           text << ((i % 2 == 0) ? "%r" : "")
           
-          text << "%xh#{exit_name(e)}%xn"
-          text << " "
+          text << "#{exit_name(e)}"
+          text << ""
           text << exit_destination(e)
         end
         
@@ -176,9 +170,9 @@ module AresMUSH
       # if the character has been idle for a really long time.
       def char_afk(char)
         if (char.is_afk?)
-          msg = "%xy%xh<#{t('describe.afk')}>%xn"
+          msg = " %xy%xh<#{t('describe.afk')}>%xn"
           if (char.afk_message)
-            msg = "#{msg} %xy#{char.afk_message}%xn"
+            msg = "#{msg} %xh%xy- %xn%xy((#{char.afk_message}))%xn"
           end
         elsif (char.client && Status.is_idle?(char.client))
           "%xy%xh<#{t('describe.idle')}>%xn"
@@ -187,16 +181,30 @@ module AresMUSH
         end
       end
       
-      def exit_name(e)
-        left("[#{e.name}]", 5)
-      end
-      
+     def exit_name(e)
+       locked = e.allow_passage?(@client.char) ? "" : "%xh%xr"
+       color = zone_color(e.dest)
+       text = "#{color}[%xn"
+       text << "#{locked}#{e.name}"
+       text << "#{color}]%xn"
+       left(text, 5)
+     end     
       def exit_destination(e)
-        locked = e.allow_passage?(@client.char) ? "" : "%xr*#{t('describe.locked')}*%xn "
         name = e.dest ? e.dest.name : t('describe.nowhere')
-        str = "#{locked}#{name}"
+        str = "#{name}"
         left(str, 30)
       end
+
+      def zone_color(room)
+        return "%xc" if room.zone == "Serve"
+        return "%xh%xc" if room.zone == "Gov"
+        return "%xm" if room.zone == "Relig"
+        return "%xh%xg" if room.zone == "Res"
+        return "%xg" if room.zone == "Lodge"
+        return "%xh%xb" if room.zone == "Comm"
+        return "%xh%xy" if room.zone == "Rec"
+      end
+
     end
   end
 end

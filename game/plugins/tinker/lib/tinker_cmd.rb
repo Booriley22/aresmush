@@ -18,10 +18,8 @@ module AresMUSH
       end
       
       def handle
-        # Put whatever you need to do here.
         client.emit_success "Done!"
       end
-
     end
   end
 end

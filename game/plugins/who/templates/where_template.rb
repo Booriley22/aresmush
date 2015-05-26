@@ -14,24 +14,26 @@ module AresMUSH
       
       def display
         text = header(t('who.where_header'))
-        
-        chars_by_room.each do |c|
-          text << "%R"
-          text << char_status(c)
-          text << " "
-          text << char_name(c)
-          text << " "
-          text << char_room(c)
-          text << " "
-          text << char_connected(c)
-          text << " "
-          text << char_idle(c)
+        active_rooms.each do |name, players|
+         text << left("%r#{name}",52)
+          text << players.join(" & ")
         end
-        
         text << footer()
-        
         text
+     end
+
+     def active_rooms
+        rooms = {}
+        self.online_chars.each do |char|
+          room_name = who_room_name(char)
+          if (rooms.has_key?(room_name))
+            rooms[room_name] << char.name
+          else
+            rooms[room_name] = [ char.name ]
+          end
+        end
+        return rooms
       end
     end 
-  end
-end
+	end
+	end

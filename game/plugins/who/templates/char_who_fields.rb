@@ -7,8 +7,12 @@ module AresMUSH
         left(char.name, 22)
       end
 
-      def char_position(char)
-        left(char.groups["Position"], 19)
+      def char_occupation(char)
+        left(char.groups["Occupation"], 19)
+      end
+
+      def char_gender(char)
+        char.gender
       end
 
       # Character's player handle, if they've made it public.

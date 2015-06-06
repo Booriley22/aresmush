@@ -1,10 +1,10 @@
 shortcuts:
     roots:
-        "faction": "group/set faction="
-        "position": "group/set position="
-        "department": "group/set department="
-        "colony": "group/set colony="
-        "factions": "group faction"
-        "positions": "group position"
-        "departments": "group department"
-        "colonies": "group colony"
+      # "faction": "group/set faction="
+        "occupation": "group/set occupation="
+      # "department": "group/set department="
+      # "colony": "group/set colony="
+      # "factions": "group faction"
+        "occupations": "group occupation"
+      # "departments": "group department"
+      # "colonies": "group colony"

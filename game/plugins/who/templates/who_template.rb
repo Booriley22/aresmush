@@ -23,7 +23,9 @@ module AresMUSH
           text << " "
           text << char_handle(c)
           text << " "
-          text << char_faction(c)
+          text << char_gender(c)
+          text << " "
+          text << char_occupation(c)
           text << " "
           text << char_connected(c)
           text << " "

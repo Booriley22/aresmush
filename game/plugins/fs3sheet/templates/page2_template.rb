@@ -20,11 +20,11 @@ module AresMUSH
         text << "#{age_title} #{age} #{birthdate_title} #{birthdate}%r"
         
         text << "%l2%r"
-
-        text << "#{colony_title} #{colony} #{position_title} #{position}%r"
-        text << "#{faction_title} #{faction} #{department_title} #{department}%r"
-        text << "#{rank_title} #{rank} #{callsign_title} #{callsign}%r"
-
+        text << "#{rank_title} #{rank}%r"
+        text << "#{occupation_title} #{occupation}%r"
+        text << "#{wiki_title} #{wiki}%r"
+        text << "#{home_title} #{home}%r"
+        text << "#{work_title} #{work}%r"
         text << "%l2%r"
         text << "#{reputation_title}%r"
         text << "#{reputation}%r"
@@ -160,15 +160,43 @@ module AresMUSH
       def birthdate
         format_field @char.birthdate.nil? ? "" : ICTime.ic_datestr(@char.birthdate)
       end
+
+      def home
+        @char.home ? @char.home.roomwiki : ""
+      end
+
+      def work
+        @char.work ? @char.work.roomwiki : ""
+      end
+
+      def home_title
+        format_field_title(t('sheet.home_title'))
+      end
+
+      def work_title
+        format_field_title(t('sheet.work_title'))
+      end
+
+      def wiki_title
+        format_field_title(t('sheet.wiki_title'))
+      end
+
+      def occupation_title
+        format_field_title(t('sheet.occupation_title'))
+      end
+
+      def wiki
+        "http://aftermathmush.wikidot.com/#{@char.name}"
+      end
+     
+      def occupation
+        format_field @char.groups['Occupation']
+      end
       
       def faction
         format_field @char.groups['Faction']
       end
-      
-      def position
-        format_field @char.groups['Position']
-      end
-      
+
       def colony
         format_field @char.groups['Colony']
       end

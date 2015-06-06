@@ -39,6 +39,10 @@ en:
        home_not_set: "You don't have a home!"
        char_has_gone_home: "%{name} goes home."
        home_set: "You make this your home."
+
+       work_not_set: "You don't have a job or business!"
+       char_has_gone_work: "%{name} goes to work."
+       work_set: "You make this your place of work."
        
        can_only_lock_exits: "You can only lock exits."
        exit_locked: "Exit locked."

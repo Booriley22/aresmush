@@ -1,0 +1,4 @@
+The %xhwork%xn command allows you to link yourself to your characters place of business and work. Please be considerate, don't use other peoples' private rooms or businesses as your work location without asking.
+
+    %xcwork/set%xn - Sets your work/business to your current location.
+    %xcwork%xn - Go to work.

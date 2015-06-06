@@ -8,4 +8,4 @@ en:
         players_ic: "%{count} IC"
         players_online: "%{count} Online"
         where_header: "Location                                            People"
-        who_header:   "Status Name                   Handle              Faction         Conn   Idle"
+        who_header:   "Status Name & OOC Handle     Gender  Occupation         Conn   Idle"

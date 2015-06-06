@@ -18,7 +18,7 @@ module AresMUSH
       end
       
       def handle
-        client.emit_success "Done!"
+        client.emit_success "#{client.char.home.nil?}"
       end
     end
   end

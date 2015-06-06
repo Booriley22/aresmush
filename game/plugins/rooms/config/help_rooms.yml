@@ -19,6 +19,12 @@ help:
                     dir: 'game/plugins/rooms/help/'
                     file: 'home.txt'
                     summary: 'Get home.'
+                work:
+                    toc_topic: "Getting Around"
+                    dir: 'game/plugins/rooms/help/'
+                    file: 'work.txt'
+                    summary: 'Go to work.'
+
                 lock:
                     toc_topic: "Getting Around"
                     dir: 'game/plugins/rooms/help'

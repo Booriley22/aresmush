@@ -8,11 +8,17 @@ module AresMUSH
       end
 
       def char_occupation(char)
-        left(char.groups["Occupation"], 19)
+        left(char.groups["Occupation"], 22)
       end
 
       def char_gender(char)
-        char.gender
+        left(char.gender, 8)
+      end
+
+      def char_name_and_handle(char)
+        name = char.name
+        handle = char.public_handle? ? " (#{char.handle})" : ""
+        left("#{name}#{handle}",27)
       end
 
       # Character's player handle, if they've made it public.

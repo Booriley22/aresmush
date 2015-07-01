@@ -19,9 +19,7 @@ module AresMUSH
           text << "%R"
           text << char_status(c)
           text << " "
-          text << char_name(c)
-          text << " "
-          text << char_handle(c)
+          text << char_name_and_handle(c)
           text << " "
           text << char_gender(c)
           text << " "

@@ -1,27 +1,27 @@
 module AresMUSH
   module FS3Skills
     def self.receives_roll_results?(char)
-      char.has_any_role?(Global.config['fs3skills']['roles']['receives_roll_results'])
+      char.has_any_role?(Global.read_config("fs3skills", "roles", "receives_roll_results"))
     end
     
     def self.can_manage_abilities?(actor)
-      actor.has_any_role?(Global.config['fs3skills']['roles']['can_manage_abilities'])
+      actor.has_any_role?(Global.read_config("fs3skills", "roles", "can_manage_abilities"))
     end
 
     def self.attributes
-      Global.config['fs3skills']['attributes']
+      Global.read_config("fs3skills", "attributes")
     end
     
     def self.action_skills
-      Global.config['fs3skills']['action_skills']
+      Global.read_config("fs3skills", "action_skills")
     end 
 
     def self.background_skills
-      Global.config['fs3skills']['background_skills']
+      Global.read_config("fs3skills", "background_skills")
     end 
 
     def self.languages
-      Global.config['fs3skills']['languages']
+      Global.read_config("fs3skills", "languages")
     end
     
     def self.attribute_names
@@ -96,11 +96,11 @@ module AresMUSH
       match = /^(?<ability>[^\+\-]+)\s*(?<ruling_attr>[\+]\s*[A-Za-z\s]+)?\s*(?<modifier>[\+\-]\s*\d+)?$/.match(str)
       return nil if match.nil?
       
-      {
-        :ability => match[:ability].strip,
-        :modifier => match[:modifier].nil? ? 0 : match[:modifier].gsub(/\s+/, "").to_i,
-        :ruling_attr => match[:ruling_attr].nil? ? nil : match[:ruling_attr][1..-1].strip
-      }
+      ability = match[:ability].strip
+      modifier = match[:modifier].nil? ? 0 : match[:modifier].gsub(/\s+/, "").to_i
+      ruling_attr = match[:ruling_attr].nil? ? nil : match[:ruling_attr][1..-1].strip
+      
+      return RollParams.new(ability, modifier, ruling_attr)
     end
     
     def self.emit_results(message, client, room, is_private)

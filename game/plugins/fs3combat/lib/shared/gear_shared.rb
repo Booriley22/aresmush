@@ -1,7 +1,7 @@
 module AresMUSH
   module FS3Combat
     def self.weapons
-      Global.config['fs3combat']['weapons']
+      Global.read_config("fs3combat", "weapons")
     end
     
     def self.weapon(name)
@@ -14,8 +14,12 @@ module AresMUSH
       weapon ? weapon[stat] : nil
     end
     
+    def self.weapon_is_stun?(name)
+      FS3Combat.weapon_stat(name, "damage_type").titleize == "Stun"
+    end
+    
     def self.armors
-      Global.config['fs3combat']['armor']
+      Global.read_config("fs3combat", "armor")
     end
     
     def self.armor(name)
@@ -24,7 +28,7 @@ module AresMUSH
     end
 
     def self.vehicles
-      Global.config['fs3combat']['vehicles']
+      Global.read_config("fs3combat", "vehicles")
     end
 
     def self.vehicle(name)
@@ -33,7 +37,7 @@ module AresMUSH
     end
     
     def self.hitlocs
-      Global.config['fs3combat']['hitloc']
+      Global.read_config("fs3combat", "hitloc")
     end
     
     def self.hitloc(name)

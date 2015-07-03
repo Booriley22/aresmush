@@ -7,15 +7,9 @@ module AresMUSH
         #   If you use Kernel.srand(22), the first 10 die rolls in tests will always be:  
         #      [6, 5, 5, 1, 5, 7, 7, 4, 5, 1]
         Kernel.srand 22
-        Global.stub(:config) {
-          {
-            "fs3skills" => {
-              "attributes" => [ { "name" => "Mind" }, {"name" => "Body" } ],
-              "action_skills" => [ { "name" => "Firearms", "ruling_attr" => "Reaction" } ],
-              "default_ruling_attr" => "Mind"
-            }
-          }
-        }
+        Global.stub(:read_config).with("fs3skills", "attributes") { [ { "name" => "Mind" }, {"name" => "Body" } ] }
+        Global.stub(:read_config).with("fs3skills", "action_skills") { [ { "name" => "Firearms", "ruling_attr" => "Reaction" } ] }
+        Global.stub(:read_config).with("fs3skills", "default_ruling_attr") { "Mind" }
         
         SpecHelpers.stub_translate_for_testing        
         
@@ -35,37 +29,37 @@ module AresMUSH
         end
         
         it "should roll ability alone" do
-          roll_params = { :ability => "Firearms" }
+          roll_params = RollParams.new("Firearms")
           # Rolls Firearms + Reaction --> 5 dice
           FS3Skills.roll_ability(@client, @char, roll_params).should eq [6, 5, 5, 1, 5]
         end
         
         it "should roll ability + ruling attr" do
-          roll_params = { :ability => "Firearms", :ruling_attr => "Mind" }
+          roll_params = RollParams.new("Firearms", 0, "Mind")
           # Rolls Firearms + Mind --> 3 dice
           FS3Skills.roll_ability(@client, @char, roll_params).should eq [6, 5, 5]
         end
         
         it "should roll ability + modifier" do
-          roll_params = { :ability => "Firearms", :modifier => 1 }
+          roll_params = RollParams.new("Firearms", 1)
           # Rolls Firearms + Reaction + 1 --> 6 dice
           FS3Skills.roll_ability(@client, @char, roll_params).should eq [6, 5, 5, 1, 5, 7]
         end
         
         it "should roll ability - modifier" do
-          roll_params = { :ability => "Firearms", :modifier => -1 }
+          roll_params = RollParams.new("Firearms", -1)
           # Rolls Firearms + Reaction - 1 --> 4 die
           FS3Skills.roll_ability(@client, @char, roll_params).should eq [6, 5, 5, 1]
         end
         
         it "should roll ability + ruling attr + modifier" do
-          roll_params = { :ability => "Firearms", :ruling_attr => "Mind", :modifier => 3}
+          roll_params = RollParams.new("Firearms", 3, "Mind")
           # Rolls Firearms + Mind + 3 --> 6 dice
           FS3Skills.roll_ability(@client, @char, roll_params).should eq [6, 5, 5, 1, 5, 7]
         end
         
         it "should confirm if rolling 0-rated skill" do
-          roll_params = { :ability => "Unskilled", :ruling_attr => "Mind"}
+          roll_params = RollParams.new("Unskilled", 0, "Mind")
           # Rolls Unskilled + Mind --> 1 die
           @client.should_receive(:emit_ooc).with('fs3skills.confirm_zero_skill')
           FS3Skills.roll_ability(@client, @char, roll_params).should eq [6]
@@ -82,7 +76,7 @@ module AresMUSH
         end
         
         it "should not allow giant die rolls" do
-          FS3Skills.roll_dice(99).should eq [1]
+          FS3Skills.roll_dice(99).should eq [7, 7, 7, 7, 7, 7]
         end
       end
     

@@ -47,7 +47,7 @@ module AresMUSH
       end
     
       def mush_name
-        center(Global.config['server']['name'], 80)
+        center(Global.read_config("server", "name"), 80)
       end
     end
   end

@@ -6,7 +6,7 @@ module AresMUSH
     end
     
     def self.combatant_types
-      Global.config["fs3combat"]["combatant_types"]
+      Global.read_config("fs3combat", "combatant_types")
     end
     
     def self.is_in_combat?(name)
@@ -17,6 +17,11 @@ module AresMUSH
       FS3Combat.combats.select { |c| c.has_combatant?(name) }.first
     end
     
+    def self.combatant_type_stat(type, stat)
+      type_config = FS3Combat.combatant_types[type]
+      type_config[stat]
+    end
+    
     def self.find_combat_by_number(client, num)
       num_str = "#{num}"
       
@@ -25,7 +30,7 @@ module AresMUSH
         return nil
       end
       
-      match = CombatInstance.all.select { |c| c.num == num_str.to_i }.first
+      match = FS3Combat.combats.select { |c| c.num == num_str.to_i }.first
 
       if (!match)
         client.emit_failure t('fs3combat.invalid_combat_number')
@@ -36,13 +41,20 @@ module AresMUSH
     end
     
     def self.with_a_combatant(name, client, &block)
-      combat = FS3Combat.combat(name)
-      if (!combat)
-        client.emit_failure t('fs3combat.not_in_combat', :name => name)
+      char = client.char
+      
+      if (!char.is_in_combat?)
+        client.emit_failure t('fs3combat.you_are_not_in_combat')
         return
       end
       
+      combat = char.combatant.combat
       combatant = combat.find_combatant(name)
+      
+      if (!combatant)
+        client.emit_failure t('fs3combat.not_in_combat', :name => name)
+        return
+      end
       
       yield combat, combatant
     end

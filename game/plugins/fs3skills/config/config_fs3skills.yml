@@ -12,59 +12,67 @@ fs3skills:
             
     attributes:
         -  
-            name: Mind
-            desc: "Mental fitness - Intelligence and Creativity"
-        -   
             name: Body
-            desc: "Physical fitness - Strength, Constitution and Agility"
+            desc: "Physical strength, constitution, and agility."
         -   
-            name: Reaction
-            desc: "Reflexes - Dexterity, Hand-Eye Coordination and Wits"
+            name: Reason
+            desc: "Intelligence and logic."
         -   
-            name: Presence
-            desc: "Personality - Charisma and Will"
+            name: Spirit
+            desc: "Mental presence, fortitude, and charisma."
+        -   
+            name: Tech
+            desc: "Technical ability and mechanical operation."
     
     action_skills:
         -
-            name: Alertness
-            desc: "Noticing things and being aware of your surroundings."
-            ruling_attr: Reaction
-        -
-            name: Demolitions
-            desc: "Blowing stuff up."
-            ruling_attr: Mind
-        -
-            name: Comms
-            desc: "Ship sensors, countermeasures and communications (ECO and CIC type duties)."
-            ruling_attr: Mind
-        -   
-            name: Firearms
-            desc: "Shooting guns."
-            ruling_attr: Reaction
-        -
-            name: First Aid
-            desc: "Patching people up outside of a hospital.  Docs should have a medical bg skill."
-            ruling_attr: Mind
-        -
-            name: Gunnery
-            desc: "Ship and vehicle weapons."
-            ruling_attr: Reaction
-        - 
-            name: Melee
-            desc: "Fighting with fists, knives, and hand-to-hand weapons."
+            name: Athletics
+            desc: "Physical fitness and athletic ability. Used in combat for throwing and evasion."
             ruling_attr: Body
         -
-            name: Piloting
-            desc: "Flying Vipers, Raptors and other airborne vehicles."
-            ruling_attr: Reaction
+            name: Driving
+            desc: "Operating motor vehicles, including cars, trucks, motorcycles, and ATVs."
+            ruling_attr: Tech
+        -
+            name: Fighting
+            desc: "Close combat (e.g. hand-to-hand, knives, clubs, etc.)"
+            ruling_attr: Body
+        -
+            name: Healing
+            desc: "Medicinal care for injuries and illness. 3+ dots is professional healer types."
+            ruling_attr: Tech
+        -   
+            name: Influence
+            desc: "Social manipulation and persuasion."
+            ruling_attr: Spirit
+        -   
+            name: Knowledge
+            desc: "General schooling and academia. 1 dot for literacy. 3+ dots for High School. 6+ dots for Master's Degree and above."
+            ruling_attr: Reason
+        -
+            name: Perception
+            desc: "Awareness of one's surroundings and attention to detail."
+            ruling_attr: Reason
+        - 
+            name: Riding
+            desc: "Horsemanship (or other riding animals)."
+            ruling_attr: Body
+        -
+            name: Shooting
+            desc: "Ranged combat (e.g. guns, bows, crossbows, etc.)"
+            ruling_attr: Tech
         - 
             name: Stealth
-            desc: "Being sneaky."
+            desc: "Moving silently and unseen, or acting with subtlety (e.g. picking pockets)."
             ruling_attr: Body
         -
-            name: Technician
-            desc: "General mechanics/electronics and fixing things."
-            ruling_attr: Mind
+            name: Survival
+            desc: "Foraging, setting snares, tracking, trailblazing, and other wilderness skills."
+            ruling_attr: Reason
+        -
+            name: Willpower
+            desc: "Mental fortitude and force of will. Useful for intimidation and resisting Influence."
+            ruling_attr: Spirit
 
     background_skills:
         - "A science - astronomy, biology, chemistry, geology, mathematics, physics, etc."
@@ -78,15 +86,76 @@ fs3skills:
         - "An unusual interest - detective novels, game show hosts, etc."
         
     languages:
-        - "Standard - Spoken across the colonies."
-        - "Gemenese - Official language of Gemenon."
-        - "Old Gemenese - Dead language known by academics and religious scholars."
-        - "Leonese - Official language of Leonis, also spoken in parts of Sagittaron and Scorpia."
-        - "Scorpian - Official language of parts of Scorpia."
-        - "Tauran - Official language of Tauron."
-        - "Sagittaran - Tribal language of Sagittaron.  There are actually dozens of dialects."
-        - "Celtan - Language of the ethnic Celtan people on Virgon's moon, Hibernia."
-        
+        - "Aboriginal - ."
+        - "Afrikaans - ."
+        - "Ancient-Aramaic - ."
+        - "Ancient-Greek - ."
+        - "Arabic - ."
+        - "Bulgarian - ."
+        - "Cajun - ."
+        - "Cambodian - ."
+        - "Cantonese - ."
+        - "Cherokee - ."
+        - "Cheyenne - ."
+        - "Cockney Slang - ."
+        - "Creole - ."
+        - "Czech - ."
+        - "Danish - ."
+        - "Dutch - ."
+        - "Egyptian - ."
+        - "Enochian - ."
+        - "Finnish - ."
+        - "French - ."
+        - "Gaelic, Irish - ."
+        - "Gaelic, Scottish - ."
+        - "German - ."
+        - "Greek - ."
+        - "Hakka - ."
+        - "Hawaiian - ."
+        - "Hebrew - ."
+        - "Hindi - ."
+        - "Hungarian - ."
+        - "Indonesian - ."
+        - "Inuit - ."
+        - "Italian - ."
+        - "Japanese - ."
+        - "Jive - ."
+        - "Korean - ."
+        - "Latin - ."
+        - "Lithuanian - ."
+        - "Mandarin - ."
+        - "Mohawk - ."
+        - "Navajo - ."
+        - "Nigerian - ."
+        - "Norwegian - ."
+        - "Persian - ."
+        - "Pictish - ."
+        - "Polish - ."
+        - "Portuguese - ."
+        - "Punjabi - ."
+        - "Romanian - ."
+        - "Romany - ."
+        - "Russian - ."
+        - "Sanskrit - ."
+        - "Seminole - ."
+        - "Serbo-croatian - ."
+        - "Shelta - ."
+        - "Sign-language - ."
+        - "Sioux - ."
+        - "Slovak - ."
+        - "Spanish - ."
+        - "Swahili - ."
+        - "Swedish - ."
+        - "Syriac - ."
+        - "Tahitian - ."
+        - "Thai - ."
+        - "Tibetan - ."
+        - "Turkish - ."
+        - "Ukrainian - ."
+        - "Vietnamese - ."
+        - "Welsh - ."
+        - "Yiddish - ."
+       
     default_ruling_attr: Mind
     max_high_abilities: 3
     max_points_in_action_skills: 32
@@ -98,7 +167,7 @@ fs3skills:
     min_background_skills: 4
     
     starting_languages:
-        - Standard
+        - English
         
     # Here is where you can assign starting skills based on some group value - position,
     # faction, department, etc.  
@@ -127,8 +196,8 @@ fs3skills:
                     Gunnery: 4
             Raptor Pilot:
                 skills:
-                    Piloting: 4
-                    Gunnery: 4
+                    SKILLNAME: 4
+                    SKILLNAME: 4
             Raptor ECO:
                 skills:
                     Piloting: 3

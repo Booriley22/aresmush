@@ -1,6 +1,6 @@
 module AresMUSH
-  module Sheet
-    class SheetPage2Template
+  module FS3Sheet
+    class InfoTemplate
       include TemplateFormatters
       
       attr_accessor :char
@@ -25,9 +25,6 @@ module AresMUSH
         text << "#{wiki_title} #{wiki}%r"
         text << "#{home_title} #{home}%r"
         text << "#{work_title} #{work}%r"
-        text << "%l2%r"
-        text << "#{reputation_title}%r"
-        text << "#{reputation}%r"
         text << "%l1"
 
         text
@@ -38,14 +35,12 @@ module AresMUSH
       end
       
       def approval_status
-        status = @char.is_approved ? 
-        "%xg%xh#{t('sheet.approved')}%xn" : 
-        "%xr%xh#{t('sheet.unapproved')}%xn"
+        status = Chargen.approval_status(@char)
         center(status, 23)
       end
       
       def page_title
-        right(t('sheet.profile_page_title'), 28)
+        right(t('sheet.info_title'), 28)
       end
       
       def fullname_title
@@ -84,8 +79,8 @@ module AresMUSH
         format_field_title(t('sheet.birthdate_title'))
       end
       
-      def reputation_title
-        "%xh#{t('sheet.reputation_title')}%xn #{t('sheet.reputation_subtitle')}"
+      def info_title
+        "%xh#{t('sheet.info_title')}%xn"
       end
       
       def callsign_title
@@ -207,10 +202,6 @@ module AresMUSH
 
       def rank
         format_field @char.rank
-      end
-            
-      def reputation
-        @char.reputation
       end
     end
   end

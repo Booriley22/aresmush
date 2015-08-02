@@ -25,7 +25,7 @@ module AresMUSH
      def active_rooms
         rooms = {}
         self.online_chars.each do |char|
-          room_name = who_room_name(char)
+          room_name = Who.who_room_name(char)
           if (rooms.has_key?(room_name))
             rooms[room_name] << char.name
           else

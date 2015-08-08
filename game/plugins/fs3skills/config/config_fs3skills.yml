@@ -179,10 +179,9 @@ fs3skills:
         # Comment this out if it's not applicable.
         Everyone:
             skills:
-                Alertness: 2
-                Firearms: 2
-                First Aid: 1
-                Melee: 1
+               Knowledge: 3
+               Perception: 1
+               Athletics: 1
         # This is the group type.
         Position:
             # This is the group value.

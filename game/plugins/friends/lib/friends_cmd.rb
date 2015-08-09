@@ -6,20 +6,25 @@ module AresMUSH
       include PluginRequiresLogin
       
       def want_command?(client, cmd)
-        cmd.root_is?("friends") && cmd.switch.nil?
+        cmd.root_is?("friend") && cmd.switch.nil?
       end
       
       def handle
         text = "%xh#{t('friends.friends_header')}%xn"
         text << "%R%l2"
         
-        client.char.friends.sort_by { |c| c.name }.each do |f| 
-          if (f.client)
+        client.char.friendships.sort_by { |f| f.friend.name }.each do |f| 
+          friend_char = f.friend
+          if (friend_char.client)
             connected = t('friends.connected')
           else
-            connected = OOCTime.local_long_timestr(client, f.last_on)
+            connected = OOCTime.local_long_timestr(client, friend_char.last_on)
           end
-          text << "%R#{f.name.ljust(25)} #{connected}"
+          text << "%R#{friend_char.name.ljust(25)} #{connected}"
+          
+          if (f.note)
+            text << "%R%T#{f.note}"
+          end
         end
         
         text << "%R%l1%R"

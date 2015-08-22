@@ -11,7 +11,7 @@ module AresMUSH
 
       def initialize
         self.required_args = ['name', 'ability_name', 'rating']
-        self.help_topic = 'skills'
+        self.help_topic = 'abilities'
         super
       end
       
@@ -31,6 +31,13 @@ module AresMUSH
           self.ability_name = titleize_input(cmd.args.arg1)
           self.rating = trim_input(cmd.args.arg2)
         end
+      end
+      
+      def check_ability_type
+        ability_type = FS3Skills.get_ability_type(client.char, self.ability_name)
+        valid_types = [:action, :advantage]
+        return t('fs3skills.wrong_type_for_ability_command') if !valid_types.include?(ability_type)
+        return nil
       end
       
       def check_valid_rating

@@ -10,81 +10,56 @@ fs3skills:
             # as someone then to see their roll results.
             - admin
             
-    attributes:
-        -  
-            name: Body
-            desc: "Physical strength, constitution, and agility."
+    aptitudes:
         -   
-            name: Reason
-            desc: "Intelligence and logic."
+            name: Athletics
+            desc: "Athletics measures a character's natural knack at performing activities involving bodily strength and agility. This includes running, swimming, climbing, jumping, throwing, and hand-to-hand combat."
         -   
+            name: Creativity
+            desc: "Artistic, imaginative, abstract thinking."
+        -   
+            name: Deftness
+            desc: "Operational activities involving hand-eye coordination (e.g. driving, firing a gun)."
+        -   
+            name: Intellect
+            desc: "Intellect measures one's capacity for logic, reason, and academic learning."
+        -
             name: Spirit
-            desc: "Mental presence, fortitude, and charisma."
-        -   
+            desc: "Spirit is a gauge of one's strength of character and presence. This affects ones social interactions, as well as mental fortitude and force of will."
+        -
             name: Tech
-            desc: "Technical ability and mechanical operation."
+            desc: "Technical ability, including the use, repair, and invention of technology. Devices that are operated manually without special technical understanding are covered by Deftness (e.g. firearms, vehicles). More advanced devices, such as computers, are covered by Tech."
     
     action_skills:
         -
-            name: Athletics
-            desc: "Physical fitness and athletic ability. Used in combat for throwing and evasion."
-            ruling_attr: Body
-        -
-            name: Driving
-            desc: "Operating motor vehicles, including cars, trucks, motorcycles, and ATVs."
-            ruling_attr: Tech
-        -
             name: Fighting
-            desc: "Close combat (e.g. hand-to-hand, knives, clubs, etc.)"
-            ruling_attr: Body
+            desc: "Used for fighting in close combat, such as bare-handed attacks, knives, clubs, etc. Though usually used offensively, it can also be used defensively for parrying attacks."
+            ruling_attr: Athletics
         -
-            name: Healing
-            desc: "Medicinal care for injuries and illness. 3+ dots is professional healer types."
-            ruling_attr: Tech
-        -   
+            name: First Aid
+            desc: "For immediate, short-term care of injuries and illness. Long-term care, surgery, and other advanced medicine is more appropriate for medical professionals, and should be covered by an Expertise."
+            ruling_attr: Intellect
+        -
             name: Influence
-            desc: "Social manipulation and persuasion."
+            desc: "Influence is sort of a catch-all for social manipulation. Generally, characters will favor a particular style of influence, be that charming persuasion, fast-talking, inspirational speeches, seduction, or lying through one's teeth."
             ruling_attr: Spirit
-        -   
-            name: Knowledge
-            desc: "General schooling and academia. 1 dot for literacy. 3+ dots for High School. 6+ dots for Master's Degree and above."
-            ruling_attr: Reason
         -
             name: Perception
-            desc: "Awareness of one's surroundings and attention to detail."
-            ruling_attr: Reason
-        - 
-            name: Riding
-            desc: "Horsemanship (or other riding animals)."
-            ruling_attr: Body
-        -
+            desc: "Perception measures one's awareness of one's surroundings and attention to detail. It is useful for spotting clues, catching a face in the crowd, and noticing someone trying to be sneaky. To some degree, it can even help get a read on someone's emotions, if the signs are overt enough (though for a proper read on someone, an appropriate Background Skill would be more effective)."
+            ruling_attr: Intellect
+        -   
             name: Shooting
-            desc: "Ranged combat (e.g. guns, bows, crossbows, etc.)"
-            ruling_attr: Tech
-        - 
+            desc: "Shooting is the skill combat with ranged weapons that fire a projectile. This includes pistols, rifles, bows, crossbows, or even slingshots. Thrown weapons like javelins, throwing knives, or stones are covered with an Athletics Aptitude roll or an appropriate interest/expertise."
+            ruling_attr: Deftness
+        -   
             name: Stealth
-            desc: "Moving silently and unseen, or acting with subtlety (e.g. picking pockets)."
-            ruling_attr: Body
-        -
+            desc: "Stealth is the skill for moving silently and unseen. It is also good for acting with subtlety for things like picking pockets, palming, or concealing small objects on one's person."
+            ruling_attr: Athletics
+        - 
             name: Survival
-            desc: "Foraging, setting snares, tracking, trailblazing, and other wilderness skills."
-            ruling_attr: Reason
-        -
-            name: Willpower
-            desc: "Mental fortitude and force of will. Useful for intimidation and resisting Influence."
-            ruling_attr: Spirit
+            desc: "In the harsh world of the Aftermath, the world is out to eat you alive. This ability measures one's wilderness survival skills, such as foraging, setting snares, building a fire, tracking, trailblazing, and so on."
+            ruling_attr: Intellectual
 
-    background_skills:
-        - "A science - astronomy, biology, chemistry, geology, mathematics, physics, etc."
-        - "A humanity - history, literature, psychology, philosophy, poetry, etc."
-        - "A profession or trade	- cook, waitress, bartender, accountant, programmer, carpenter, brewer, blacksmith, etc."
-        - "A game - chess, roleplaying, poker, etc."
-        - "An art - sculpting, painting, sketching, photography, etc."
-        - "A form of expression - acting, singing, dancing, playing an instrument, writing"
-        - "A sport - baseball, football, gymnastics, etc."
-        - "A craft or hobby - gardening, basketweaving, knitting, etc."
-        - "An unusual interest - detective novels, game show hosts, etc."
-        
     languages:
         - "Aboriginal - ."
         - "Afrikaans - ."
@@ -156,15 +131,24 @@ fs3skills:
         - "Welsh - ."
         - "Yiddish - ."
        
-    default_ruling_attr: Mind
+    # Set to 'true' if you're using advantages, 'false' if you're not.
+    enable_advantages: false
+
+    advantages:
+        -
+            name: "Wealth"
+            desc: "Special assets."
+            related_apt: Confident
+    
+    free_languages: 2
+    free_interests: 4
+    
+    default_related_apt: Intellectual
+
     max_high_abilities: 3
-    max_points_in_action_skills: 32
-    max_points_in_attributes: 12
-    starting_points: 60
-    high_ability_level: 7
-    max_hooks: 99
-    min_hooks: 2
-    min_background_skills: 4
+    starting_points: 20
+    high_ability_level: 4
+    min_interests: 1
     
     starting_languages:
         - English
@@ -177,63 +161,20 @@ fs3skills:
     starting_skills:
         # You can set starting skills for everyone using the special "everyone" group.
         # Comment this out if it's not applicable.
-        Everyone:
-            skills:
-               Knowledge: 3
-               Perception: 1
-               Athletics: 1
+        #Everyone:
+            #skills:
+               #SomeSkill: 1
         # This is the group type.
-        Position:
+        #Position:
             # This is the group value.
-            Viper Pilot:
+            #Viper Pilot:
                 # You can set some notes to show.  Comment out if there are none.
                 # notes: ""
                 
-                skills: 
+                #skills: 
                     # List the skills and ratings they should get.
-                    Piloting: 4
-                    Gunnery: 4
-            Raptor Pilot:
-                skills:
-                    SKILLNAME: 4
-                    SKILLNAME: 4
-            Raptor ECO:
-                skills:
-                    Piloting: 3
-                    Gunnery: 3
-                    Comms: 4
-            Rifleman:
-                skills:
-                    Firearms: 4
-                    Melee: 3
-            Combat Engineer:
-                notes: "A combat engineer should take a 4 or higher in either Demo or Tech."
-                skills:
-                    Demolitions: 3
-                    Firearms: 3
-                    Melee: 2
-                    Technician: 3
-            Recon:
-                skills:
-                    Firearms: 4
-                    Stealth: 4
-            Combat Medic:
-                skills:
-                    First Aid: 4
-            Doctor:
-                notes: "A doctor does not necessarily need first aid. They should have a background skill corresponding to their specialty (e.g. Surgery or Emergency Medicine.)"
-            
-            Nurse:
-                skills:
-                    Nursing: 4
-    
-            Corpsman:
-                skills:
-                    First Aid: 4
-            
-            Deckhand:
-                skills:
-                    Technician: 4
+                    #Piloting: 2
+                    #Gunnery: 2
 
         # Example of how you can use factions or other groups to set additional skills.
         #Faction:

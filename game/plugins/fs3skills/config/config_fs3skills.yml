@@ -13,123 +13,123 @@ fs3skills:
     aptitudes:
         -   
             name: Athletics
-            desc: "Athletics measures a character's natural knack at performing activities involving bodily strength and agility. This includes running, swimming, climbing, jumping, throwing, and hand-to-hand combat."
+            desc: "%R%TAthletics measures a character's natural knack at performing activities involving bodily strength and agility. This includes running, swimming, climbing, jumping, throwing, and hand-to-hand combat.%R"
         -   
             name: Creativity
-            desc: "Artistic, imaginative, abstract thinking."
+            desc: "%R%TArtistic, imaginative, abstract thinking.%R"
         -   
             name: Deftness
-            desc: "Operational activities involving hand-eye coordination (e.g. driving, firing a gun)."
+            desc: "%R%TOperational activities involving hand-eye coordination (e.g. driving, firing a gun).%R"
         -   
             name: Intellect
-            desc: "Intellect measures one's capacity for logic, reason, and academic learning."
+            desc: "%R%TIntellect measures one's capacity for logic, reason, and academic learning.%R"
         -
             name: Spirit
-            desc: "Spirit is a gauge of one's strength of character and presence. This affects ones social interactions, as well as mental fortitude and force of will."
+            desc: "%R%TSpirit is a gauge of one's strength of character and presence. This affects ones social interactions, as well as mental fortitude and force of will.%R"
         -
             name: Tech
-            desc: "Technical ability, including the use, repair, and invention of technology. Devices that are operated manually without special technical understanding are covered by Deftness (e.g. firearms, vehicles). More advanced devices, such as computers, are covered by Tech."
+            desc: "%R%TTechnical ability, including the use, repair, and invention of technology. Devices that are operated manually without special technical understanding are covered by Deftness (e.g. firearms, vehicles). More advanced devices, such as computers, are covered by Tech.%R"
     
     action_skills:
         -
             name: Fighting
-            desc: "Used for fighting in close combat, such as bare-handed attacks, knives, clubs, etc. Though usually used offensively, it can also be used defensively for parrying attacks."
+            desc: "%R%TUsed for fighting in close combat, such as bare-handed attacks, knives, clubs, etc. Though usually used offensively, it can also be used defensively for parrying attacks.%R"
             related_apt: Athletics
         -
             name: First Aid
-            desc: "For immediate, short-term care of injuries and illness. Long-term care, surgery, and other advanced medicine is more appropriate for medical professionals, and should be covered by an Expertise."
+            desc: "%R%TFor immediate, short-term care of injuries and illness. Long-term care, surgery, and other advanced medicine is more appropriate for medical professionals, and should be covered by an Expertise.%R"
             related_apt: Intellect
         -
             name: Influence
-            desc: "Influence is sort of a catch-all for social manipulation. Generally, characters will favor a particular style of influence, be that charming persuasion, fast-talking, inspirational speeches, seduction, or lying through one's teeth."
+            desc: "%R%TInfluence is sort of a catch-all for social manipulation. Generally, characters will favor a particular style of influence, be that charming persuasion, fast-talking, inspirational speeches, seduction, or lying through one's teeth.%R"
             related_apt: Spirit
         -
             name: Perception
-            desc: "Perception measures one's awareness of one's surroundings and attention to detail. It is useful for spotting clues, catching a face in the crowd, and noticing someone trying to be sneaky. To some degree, it can even help get a read on someone's emotions, if the signs are overt enough (though for a proper read on someone, an appropriate Background Skill would be more effective)."
+            desc: "%R%TPerception measures one's awareness of one's surroundings and attention to detail. It is useful for spotting clues, catching a face in the crowd, and noticing someone trying to be sneaky. To some degree, it can even help get a read on someone's emotions, if the signs are overt enough (though for a proper read on someone, an appropriate Background Skill would be more effective).%R"
             related_apt: Intellect
         -   
             name: Shooting
-            desc: "Shooting is the skill combat with ranged weapons that fire a projectile. This includes pistols, rifles, bows, crossbows, or even slingshots. Thrown weapons like javelins, throwing knives, or stones are covered with an Athletics Aptitude roll or an appropriate interest/expertise."
+            desc: "%R%TShooting is the skill combat with ranged weapons that fire a projectile. This includes pistols, rifles, bows, crossbows, or even slingshots. Thrown weapons like javelins, throwing knives, or stones are covered with an Athletics Aptitude roll or an appropriate interest/expertise.%R"
             related_apt: Deftness
         -   
             name: Stealth
-            desc: "Stealth is the skill for moving silently and unseen. It is also good for acting with subtlety for things like picking pockets, palming, or concealing small objects on one's person."
+            desc: "%R%TStealth is the skill for moving silently and unseen. It is also good for acting with subtlety for things like picking pockets, palming, or concealing small objects on one's person.%R"
             related_apt: Athletics
         - 
             name: Survival
-            desc: "In the harsh world of the Aftermath, the world is out to eat you alive. This ability measures one's wilderness survival skills, such as foraging, setting snares, building a fire, tracking, trailblazing, and so on."
+            desc: "%R%TIn the harsh world of the Aftermath, the world is out to eat you alive. This ability measures one's wilderness survival skills, such as foraging, setting snares, building a fire, tracking, trailblazing, and so on.%R"
             related_apt: Intellectual
 
     languages:
-        - "Aboriginal - ."
-        - "Afrikaans - ."
-        - "Ancient-Aramaic - ."
-        - "Ancient-Greek - ."
-        - "Arabic - ."
-        - "Bulgarian - ."
-        - "Cajun - ."
-        - "Cambodian - ."
-        - "Cantonese - ."
-        - "Cherokee - ."
-        - "Cheyenne - ."
-        - "Cockney Slang - ."
-        - "Creole - ."
-        - "Czech - ."
-        - "Danish - ."
-        - "Dutch - ."
-        - "Egyptian - ."
-        - "Enochian - ."
-        - "Finnish - ."
-        - "French - ."
-        - "Gaelic, Irish - ."
-        - "Gaelic, Scottish - ."
-        - "German - ."
-        - "Greek - ."
-        - "Hakka - ."
-        - "Hawaiian - ."
-        - "Hebrew - ."
-        - "Hindi - ."
-        - "Hungarian - ."
-        - "Indonesian - ."
-        - "Inuit - ."
-        - "Italian - ."
-        - "Japanese - ."
-        - "Jive - ."
-        - "Korean - ."
-        - "Latin - ."
-        - "Lithuanian - ."
-        - "Mandarin - ."
-        - "Mohawk - ."
-        - "Navajo - ."
-        - "Nigerian - ."
-        - "Norwegian - ."
-        - "Persian - ."
-        - "Pictish - ."
-        - "Polish - ."
-        - "Portuguese - ."
-        - "Punjabi - ."
-        - "Romanian - ."
-        - "Romany - ."
-        - "Russian - ."
-        - "Sanskrit - ."
-        - "Seminole - ."
-        - "Serbo-croatian - ."
-        - "Shelta - ."
-        - "Sign-language - ."
-        - "Sioux - ."
-        - "Slovak - ."
-        - "Spanish - ."
-        - "Swahili - ."
-        - "Swedish - ."
-        - "Syriac - ."
-        - "Tahitian - ."
-        - "Thai - ."
-        - "Tibetan - ."
-        - "Turkish - ."
-        - "Ukrainian - ."
-        - "Vietnamese - ."
-        - "Welsh - ."
-        - "Yiddish - ."
+        - "Aboriginal"
+        - "Afrikaans"
+        - "Ancient-Aramaic"
+        - "Ancient-Greek"
+        - "Arabic"
+        - "Bulgarian"
+        - "Cajun"
+        - "Cambodian"
+        - "Cantonese"
+        - "Cherokee"
+        - "Cheyenne"
+        - "Cockney Slang"
+        - "Creole"
+        - "Czech"
+        - "Danish"
+        - "Dutch"
+        - "Egyptian"
+        - "Enochian"
+        - "Finnish"
+        - "French"
+        - "Gaelic, Irish"
+        - "Gaelic, Scottish"
+        - "German"
+        - "Greek"
+        - "Hakka"
+        - "Hawaiian"
+        - "Hebrew"
+        - "Hindi"
+        - "Hungarian"
+        - "Indonesian"
+        - "Inuit"
+        - "Italian"
+        - "Japanese"
+        - "Jive"
+        - "Korean"
+        - "Latin"
+        - "Lithuanian"
+        - "Mandarin"
+        - "Mohawk"
+        - "Navajo"
+        - "Nigerian"
+        - "Norwegian"
+        - "Persian"
+        - "Pictish"
+        - "Polish"
+        - "Portuguese"
+        - "Punjabi"
+        - "Romanian"
+        - "Romany"
+        - "Russian"
+        - "Sanskrit"
+        - "Seminole"
+        - "Serbo-croatian"
+        - "Shelta"
+        - "Sign-language"
+        - "Sioux"
+        - "Slovak"
+        - "Spanish"
+        - "Swahili"
+        - "Swedish"
+        - "Syriac"
+        - "Tahitian"
+        - "Thai"
+        - "Tibetan"
+        - "Turkish"
+        - "Ukrainian"
+        - "Vietnamese"
+        - "Welsh"
+        - "Yiddish"
        
     # Set to 'true' if you're using advantages, 'false' if you're not.
     enable_advantages: false
@@ -140,7 +140,7 @@ fs3skills:
             desc: "Special assets."
             related_apt: Confident
     
-    free_languages: 2
+    free_languages: 1
     free_interests: 4
     
     default_related_apt: Intellect

@@ -15,9 +15,6 @@ fs3skills:
             name: Athletics
             desc: "%R%TAthletics measures a character's natural knack at performing activities involving bodily strength and agility. This includes running, swimming, climbing, jumping, throwing, and hand-to-hand combat.%R"
         -   
-            name: Creativity
-            desc: "%R%TArtistic, imaginative, abstract thinking.%R"
-        -   
             name: Deftness
             desc: "%R%TOperational activities involving hand-eye coordination (e.g. driving, firing a gun).%R"
         -   
@@ -144,11 +141,12 @@ fs3skills:
     free_interests: 4
     
     default_related_apt: Intellect
-
     max_high_abilities: 3
     starting_points: 20
     high_ability_level: 4
     min_interests: 1
+    min_hooks: 2
+    min_goals: 1
     
     starting_languages:
         - English

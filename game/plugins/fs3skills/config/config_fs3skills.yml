@@ -14,6 +14,9 @@ fs3skills:
         -   
             name: Athletics
             desc: "%R%TAthletics measures a character's natural knack at performing activities involving bodily strength and agility. This includes running, swimming, climbing, jumping, throwing, and hand-to-hand combat.%R"
+        -
+            name: Creativity
+            desc: "%R%TArtistic, imaginative, abstract thinking.%R"
         -   
             name: Deftness
             desc: "%R%TOperational activities involving hand-eye coordination (e.g. driving, firing a gun).%R"

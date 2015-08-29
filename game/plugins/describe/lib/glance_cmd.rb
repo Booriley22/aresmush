@@ -17,7 +17,9 @@ module AresMUSH
       end
 
       def glance_view(char)
-      "%xh#{char.fullname}%xn %x190-%xn A #{char.age} year old #{char.gender} with #{char.hair} hair, #{char.eyes} eyes and #{char.skin} complexion. Standing at #{char.height} with a #{char.physique} physique. #{char.shortdesc} #{char.subjective_pronoun} played by is: #{char.actor}."
+      desc1 = "#{char.age} year old #{char.gender} with #{char.hair} hair, #{char.eyes} eyes and #{char.skin} complexion"
+      desc2 = "at #{char.height} with a #{char.physique} physique."
+      "%xh#{char.fullname}%xn %x190-%xn A #{desc1.downcase}. Standing #{desc2.downcase} #{char.shortdesc} #{char.possessive_pronoun.titlecase} played by is: #{char.actor}."
       end
     end
    end

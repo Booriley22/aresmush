@@ -3,7 +3,7 @@ help:
         main:
             topics:
                 ranks: 
-                    toc_topic: Character Creation
+#                    toc_topic: Character Creation
                     dir: 'game/plugins/ranks/help/'
                     file: 'ranks.txt'
                     summary: "Military/paramilitary ranks."
@@ -11,7 +11,7 @@ help:
         admin:
             topics:
                 ranks: 
-                    toc_topic: Character Creation
+#                    toc_topic: Character Creation
                     dir: 'game/plugins/ranks/help/'
                     file: 'admin_ranks.txt'
                     summary: "Military/paramilitary ranks."

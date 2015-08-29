@@ -20,7 +20,6 @@ module AresMUSH
         text << "#{age_title} #{age} #{birthdate_title} #{birthdate}%r"
         
         text << "%l2%r"
-        text << "#{rank_title} #{rank}%r"
         text << "#{occupation_title} #{occupation}%r"
         text << "#{wiki_title} #{wiki}%r"
         text << "#{home_title} #{home}%r"
@@ -116,7 +115,7 @@ module AresMUSH
       end
       
       def fullname
-        format_field @char.fullname
+        @char.fullname
       end
       
       def callsign

@@ -31,7 +31,11 @@ module AresMUSH
       end
         
       def name
-        left(@char.name, 25)
+        @char.name
+      end
+      
+      def actor
+        @char.actor
       end
       
       def approval_status
@@ -53,6 +57,10 @@ module AresMUSH
 
       def fullname_title
         format_field_title(t('sheet.fullname_title'))
+      end
+      
+      def actor_title
+        format_field_title(t('sheet.actor_title'))
       end
 
       def gender_title

@@ -33,7 +33,7 @@ module AresMUSH
         text << hooks
         text << "%R%R"
         text << goals
-        
+
         text
       end
       
@@ -106,10 +106,6 @@ module AresMUSH
         @char.rank
       end
             
-      def reputation
-        @char.reputation
-      end
-
       def background
         "+ Background%R#{ @char.background } "
       end

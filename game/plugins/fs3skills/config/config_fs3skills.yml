@@ -138,7 +138,7 @@ fs3skills:
         -
             name: "Wealth"
             desc: "Special assets."
-            related_apt: Confident
+            related_apt: Confidence
     
     free_languages: 1
     free_interests: 4

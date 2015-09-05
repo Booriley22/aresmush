@@ -1,0 +1,18 @@
+game:
+    
+    # Name of your game.
+    name: Aftermath
+
+    # Please select the appropriate category to describe your game:
+    # "Historical", "Sci-Fi", "Fantasy", "Modern", "Supernatural", "Social", "Other"
+    category: Sci-Fi
+    
+    # Describe your game.  You may use ansi and other MUSH formatting codes (%r, etc.).
+    description: Aftermath is a story of survival set in the fictional Oregon town of Myrtle Valley, which weathered a cataclysm, but has been largely cut off from the rest of the world. A tale of the daily lives of the town's residents, struggling to survive and keep their haven safe against the new dangers of a world gone mad.
+    
+    # Your game's website
+    website: aftermathmush.wikidot.com
+    
+    # yes if your game is open for business, no if it is in development, down, or 
+    # otherwise not open to the public
+    game_open: "no"

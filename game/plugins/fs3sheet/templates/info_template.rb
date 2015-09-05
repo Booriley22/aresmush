@@ -14,6 +14,7 @@ module AresMUSH
         text << "%xh#{name}%xn #{approval_status} #{page_title}%r"
         text << "%l2%r"
         text << "#{fullname_title} #{fullname}%r"
+        text << "#{actor_title} #{actor}%r"
         text << "#{gender_title} #{gender} #{skin_title} #{skin}%r"
         text << "#{height_title} #{height} #{physique_title} #{physique}%r"
         text << "#{hair_title} #{hair} #{eyes_title} #{eyes}%r"
@@ -38,10 +39,18 @@ module AresMUSH
         center(status, 23)
       end
       
+      def actor
+        @char.actor
+      end
+
       def page_title
         right(t('sheet.info_title'), 28)
       end
       
+      def actor_title
+        format_field_title("Played By:")
+      end
+
       def fullname_title
         format_field_title(t('sheet.fullname_title'))
       end

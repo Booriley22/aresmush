@@ -3,6 +3,7 @@ jobs:
         # List roles that are allowed to see jobs.
         can_access_jobs: 
             - admin
+            - app_review
             # - another_role
 
     # List the categories you want to support.

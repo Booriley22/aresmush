@@ -8,6 +8,7 @@ roles:
         - admin
         - builder
         - guest
+        - app_review
         # - another role
     # List roles have the power to assign other roles.
     can_assign_role: 

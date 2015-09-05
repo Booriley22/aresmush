@@ -3,6 +3,7 @@ chargen:
         # List roles that are allowed to approve and reject characters.
         can_approve: 
             - admin
+            - app_review
             # - another_role
         # List roles that are allowed to edit and set other peoples' backgrounds.
         can_manage_bgs:

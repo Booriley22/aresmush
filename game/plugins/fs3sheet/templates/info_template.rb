@@ -173,11 +173,15 @@ module AresMUSH
       end
 
       def home
-        @char.home ? @char.home.roomwiki : ""
+        return "" if !@char.home
+        return @char.home.name if !@char.home.roomwiki
+        return "#{@char.home.name} (#{@char.home.roomwiki})"
       end
 
       def work
-        @char.work ? @char.work.roomwiki : ""
+        return "" if !@char.work
+        return @char.work.name if !@char.work.roomwiki
+        return "#{@char.work.name} (@char.work.roomwiki})"
       end
 
       def home_title

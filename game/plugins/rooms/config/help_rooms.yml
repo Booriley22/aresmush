@@ -37,13 +37,19 @@ help:
                     dir: 'game/plugins/rooms/help/'
                     file: 'building.txt'
                     summary: 'Building the grid.'
-                    aliases: [ 'build', 'open', 'rooms', 'dig', 'link', 'unlink', 'area', 'grid', 'roomtype', 'zone' ]
+                    aliases: [ 'build', 'open', 'rooms', 'dig', 'link', 'unlink', 'area', 'grid', 'roomtype' ]
                 getting around: 
                     toc_topic: 'Getting Around'
                     dir: 'game/plugins/rooms/help/'
                     file: 'admin_getting_around.txt'
                     summary: 'Getting around the grid.'
                     aliases: [ 'teleport', 'join' ]
+                zone: 
+                    toc_topic: 'Building'
+                    dir: 'game/plugins/rooms/help/'
+                    file: 'zone.txt'
+                    summary: 'Room zones.'
+                    aliases: [ 'zones' ]
         builder:
             topics:
                 building: 
@@ -51,11 +57,17 @@ help:
                     dir: 'game/plugins/rooms/help/'
                     file: 'building.txt'
                     summary: 'Building the grid.'
-                    aliases: [ 'build', 'open', 'rooms', 'dig', 'link', 'unlink', 'area', 'grid', 'roomtype', 'zone' ]
+                    aliases: [ 'build', 'open', 'rooms', 'dig', 'link', 'unlink', 'area', 'grid', 'roomtype' ]
                 getting around: 
                     toc_topic: 'Building'
                     dir: 'game/plugins/rooms/help/'
                     file: 'admin_getting_around.txt'
                     summary: 'Getting around the grid.'
                     aliases: [ 'teleport', 'join' ]
-            
+                zone: 
+                    toc_topic: 'Building'
+                    dir: 'game/plugins/rooms/help/'
+                    file: 'zone.txt'
+                    summary: 'Room zones.'
+                    aliases: [ 'zones' ]
+                 

@@ -1,0 +1,14 @@
+The zone command sets the room's zoning.
+
+    %xczone <zone>%xn
+
+Valid zones are:
+
+    Serve
+    Gov
+    Relig
+    Res
+    Lodge
+    Comm
+    Rec
+

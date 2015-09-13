@@ -196,6 +196,7 @@ module AresMUSH
       end
 
       def zone_color(room)
+        return "%xh" if !room
         return "%xc" if room.zone == "Serve"
         return "%xh%xc" if room.zone == "Gov"
         return "%xm" if room.zone == "Relig"

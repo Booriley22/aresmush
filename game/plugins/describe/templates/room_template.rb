@@ -1,15 +1,15 @@
 module AresMUSH
   module Describe
     # Template for a room.
-    class RoomTemplate
+    class RoomTemplate < AsyncTemplateRenderer
       include TemplateFormatters
                             
       def initialize(room, client)
         @room = room
-        @client = client
+        super client
       end
       
-      def display
+      def build
         text = header_display()
         text << "%r%l2%r"
         text << desc_display()
@@ -123,7 +123,7 @@ module AresMUSH
       end
       
       def ooc_time
-        OOCTime.local_short_timestr(@client, Time.now)
+        OOCTime.local_short_timestr(self.client, Time.now)
       end
       
       def foyer_exits

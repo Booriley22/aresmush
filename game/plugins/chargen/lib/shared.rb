@@ -44,9 +44,9 @@ module AresMUSH
       return true
     end
     
-    def self.show_bg(model)
-      template = BgTemplate.new(model)
-      template.display
+    def self.show_bg(model, client)
+      template = BgTemplate.new(model, client)
+      template.render
     end
     
     def self.read_tutorial(name)
@@ -82,7 +82,7 @@ module AresMUSH
           display << "%R%l2%R"
         end        
         if (help_file)
-          display << Help.load_help("main", help_file)
+          display << Help.load_help(help_file)
         end
         display << "%R%L2%R#{prev_page_footer}#{next_page_footer}"
       rescue Exception => e

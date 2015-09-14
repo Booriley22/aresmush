@@ -67,5 +67,8 @@ chargen:
             help: descriptions
         actor:
             help: actors
+        wiki:
+            help: wiki
+            tutorial: 'wiki.txt'
         review:
             help: apps

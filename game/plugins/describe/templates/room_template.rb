@@ -25,7 +25,7 @@ module AresMUSH
       
       def header_display
         text = "%l1%r"
-        text << "#{zone_color(@room)}#{name}%xn #{area}%r"
+        text << "#{@room.zone_color}#{name}%xn #{area}%r"
         text << "#{ic_time} %x190~%xn %xh%xx(( #{ooc_time} )) %xn#{grid}"
 
         text
@@ -183,7 +183,7 @@ module AresMUSH
       
      def exit_name(e)
        locked = e.allow_passage?(@client.char) ? "" : "%xh%xr"
-       color = zone_color(e.dest)
+       color = e.dest ? e.dest.zone_color : "%xh"
        text = "#{color}[%xn"
        text << "#{locked}#{e.name}"
        text << "#{color}]%xn"
@@ -194,18 +194,6 @@ module AresMUSH
         str = "#{name}"
         left(str, 30)
       end
-
-      def zone_color(room)
-        return "%xh" if !room
-        return "%xc" if room.zone == "Serve"
-        return "%xh%xc" if room.zone == "Gov"
-        return "%xm" if room.zone == "Relig"
-        return "%xh%xg" if room.zone == "Res"
-        return "%xg" if room.zone == "Lodge"
-        return "%xh%xb" if room.zone == "Comm"
-        return "%xh%xy" if room.zone == "Rec"
-      end
-
     end
   end
 end

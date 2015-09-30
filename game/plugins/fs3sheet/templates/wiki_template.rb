@@ -12,19 +12,14 @@ module AresMUSH
       
       def build
         text = "[[include characterbox%r"
-        text << "|image=%r"
+        text << "|title=Character Information%r"
+        text << "|image=#{ name }_01.jpg%r"
         text << "|actor=#{ actor }%r"
         text << "|name=#{ fullname }%r"
-        text << "|age=#{ age }%r"
-        text << "|birthday=#{ birthdate } %r"
-        text << "|title=#{ name }%r"
         text << "|nicknames=[!-- Nicknames or aliases --]%r"
+        text << "|birthday=#{ birthdate } %r"
+        text << "|position=[!-- Occupational Title --]%r"
         text << "|hometown=[!-- Where you're from --]%r"
-        text << "|position=#{ occupation }%r"
-        text << "|height=#{ height }%r"
-        text << "|physique=#{ physique }%r"
-        text << "|eyes=#{ eyes }%r"
-        text << "|hair=#{ hair }%r"
         text << "]]"
         text << "%R%R"
         text << description
@@ -34,8 +29,27 @@ module AresMUSH
         text << hooks
         text << "%R%R"
         text << goals
+        text << "%R%R"
+        text << "+ IC Events%R"
+        text << "[[include LogList name=#{name}]]"
+        text << "%R%R"
+        text << "+ Relationships%R"
+        text << "[[include RelationshipsTop]]"
+        text << "%R%R"
+        text << "[[include RelationshipBox%R"
+        text << "| name=<mush name here>%R"
+        text << "| relationship=**<Relation>** - <describe relationship>%R"
+        text << "]]"
+        text << "%R%R"
+        text << "[[include RelationshipBoxNoImage%R"
+        text << "| name=<Name>%R"
+        text << "| relationship=**<Relation>** - <describe relationship>%R"
+        text << "]]%R"
+        text << "[[include RelationshipsBottom]]"
+        text << "%R%R"
+        text << "+ Gallery%R"
+        text << "[[gallery]]"
 
-        text
       end
       
       def name

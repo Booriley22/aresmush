@@ -17,7 +17,7 @@ module AresMUSH
       end
       
       def crack!
-        self.name = cmd.args.nil? ? client.char.handle : titleize_input(cmd.args)
+        self.name = cmd.args.nil? ? client.char.name : titleize_input(cmd.args)
       end
       
       def handle

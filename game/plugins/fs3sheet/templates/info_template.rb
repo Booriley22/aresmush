@@ -182,7 +182,7 @@ module AresMUSH
       def work
         return "" if !@char.work
         return @char.work.name if !@char.work.roomwiki
-        return "#{@char.work.name} (@char.work.roomwiki})"
+        return "#{@char.work.name} (#{@char.work.roomwiki})"
       end
 
       def home_title

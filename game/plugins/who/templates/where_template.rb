@@ -15,9 +15,12 @@ module AresMUSH
       
       def build
         text = header(t('who.where_header'))
-        active_rooms.each do |name, players|
-         text << left("%r#{name}",52)
-          text << players.join(" & ")
+        active_rooms.sort_by { |r, v| r }.each do |name, info|
+        players = info[:chars]
+        color = info[:color]
+         text << left("%r#{color}#{name}%xn",51)
+         text << " "
+         text << players.join(", ")
         end
         text << footer()
         text
@@ -28,13 +31,15 @@ module AresMUSH
         self.online_chars.each do |char|
           room_name = Who.who_room_name(char)
           if (rooms.has_key?(room_name))
-            rooms[room_name] << char.name
+            rooms[room_name][:chars] << char.name
           else
-            rooms[room_name] = [ char.name ]
+            rooms[room_name] = 
+               { :chars => [ char.name ],
+                  :color => char.room.zone_color }
           end
         end
         return rooms
       end
-    end 
-	end
-	end
+    end
+  end
+end

@@ -1,0 +1,5 @@
+A wiki page is a required part of character creation. This means that your application will not be approved before your character page is completed.  In particular, note that you must have at least two Relationships (be they PCs or NPCs), including at least a sentence describing the relationship.
+
+The wiki command will get you started with some basic information to copy/paste into your wiki page.  For more detailed instructions, see:
+
+    http://aftermathmush.wikidot.com/chargen#toc13

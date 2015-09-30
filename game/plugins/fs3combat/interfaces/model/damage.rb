@@ -10,6 +10,7 @@ module AresMUSH
     field :healing_points, :type => Integer
     field :description, :type => String
     field :is_stun, :type => Boolean
+    field :is_mock, :type => Boolean
   
     belongs_to :character, :class_name => "AresMUSH::Character"
 
@@ -24,6 +25,13 @@ module AresMUSH
       return false
     end
   
+    def wound_mod
+      config = Global.read_config("fs3combat", "damage_mods")
+      mod = config[self.current_severity]
+      mod = mod / 2 if self.last_treated
+      mod
+    end
+    
     def heal(points, was_treated = false)
       return if self.healing_points == 0
     

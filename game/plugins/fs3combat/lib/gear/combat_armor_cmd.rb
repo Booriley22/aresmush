@@ -4,6 +4,7 @@ module AresMUSH
       include Plugin
       include PluginRequiresLogin
       include PluginRequiresArgs
+      include NotAllowedWhileTurnInProgress
       
       attr_accessor :name, :armor
       
@@ -34,7 +35,9 @@ module AresMUSH
       end
       
       def handle
-        FS3Combat.set_armor(client, self.name, self.armor)
+        FS3Combat.with_a_combatant(name, client) do |combat, combatant|        
+          FS3Combat.set_armor(client, combatant, self.armor)
+        end
       end
     end
   end

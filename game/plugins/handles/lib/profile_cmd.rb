@@ -21,7 +21,14 @@ module AresMUSH
       end
       
       def handle
-        Handles.get_profile(client, self.name)
+        if (Handles.handle_name_valid?(name))
+          Handles.get_profile(client, name)
+        else
+          ClassTargetFinder.with_a_character(name, client) do |model|
+            template = CharProfileTemplate.new(client, model)
+            template.render
+          end
+        end
       end      
     end
 

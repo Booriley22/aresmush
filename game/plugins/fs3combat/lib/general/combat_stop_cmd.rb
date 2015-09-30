@@ -3,6 +3,7 @@ module AresMUSH
     class CombatStopCmd
       include Plugin
       include PluginRequiresLogin
+      include NotAllowedWhileTurnInProgress
       
       attr_accessor :num
       
@@ -18,10 +19,17 @@ module AresMUSH
         combat = FS3Combat.find_combat_by_number(client, self.num)
         return if (!combat)
 
-        combat.emit t('fs3combat.combat_stopped_by', :name => client.name)
-        combat.destroy
+        combat.combatants.each do |c|
+          c.clear_mock_damage
+        end
         
-        client.emit_success t('fs3combat.combat_stopped', :num => self.num)
+        combat.emit t('fs3combat.combat_stopped_by', :name => client.name)
+        client.emit_success t('fs3combat.stopping_combat', :num => self.num)
+        
+        Global.dispatcher.spawn("Stopping combat.", client) do      
+          combat.destroy
+          client.emit_success t('fs3combat.combat_stopped', :num => self.num)
+        end
       end
     end
   end

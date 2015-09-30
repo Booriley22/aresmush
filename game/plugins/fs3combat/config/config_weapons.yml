@@ -12,6 +12,7 @@ fs3combat:
     #      which combat actions are available.
     #   is_automatic: For ranged weapons, does it support bursts or full_auto fire?  
     #   ammo: For ranged weapons, how many shots can it fire before it has to reload.
+    #      Comment ammo out for weapons that don't need to reload.
     #   recoil: For automatic weapons, this is a modifier applied to each bullet after 
     #      the first when firing a burst or full-auto.
     #   damage_type:  Physical or Stun.
@@ -28,7 +29,7 @@ fs3combat:
             penetration: 3
             weapon_type: Explosive
             is_automatic: false
-            ammo: 0
+            # ammo: 0
             recoil: 0
             damage_type: Physical
             accuracy: 0
@@ -42,7 +43,7 @@ fs3combat:
             penetration: 20
             weapon_type: Explosive
             is_automatic: false
-            ammo: 0
+            # ammo: 0
             recoil: 0
             damage_type: Stun
             accuracy: 0
@@ -56,7 +57,7 @@ fs3combat:
             penetration: 3
             weapon_type: Explosive
             is_automatic: false
-            ammo: 0
+            # ammo: 0
             recoil: 0
             damage_type: Physical
             accuracy: 0
@@ -86,7 +87,7 @@ fs3combat:
             weapon_type: Ranged
             is_automatic: true
             ammo: 30
-            recoil: 2
+            recoil: 1
             damage_type: Physical
             accuracy: 0
             has_shrapnel: false
@@ -101,7 +102,7 @@ fs3combat:
             weapon_type: Ranged
             is_automatic: true
             ammo: 20
-            recoil: 2
+            recoil: 1
             damage_type: Physical
             accuracy: 0
             has_shrapnel: false
@@ -116,7 +117,7 @@ fs3combat:
             weapon_type: Ranged
             is_automatic: true
             ammo: 100
-            recoil: 3
+            recoil: 2
             damage_type: Physical
             accuracy: 0
             has_shrapnel: false
@@ -145,7 +146,7 @@ fs3combat:
             penetration: 2.5
             weapon_type: Ranged
             is_automatic: false
-            ammo: 0
+            # ammo: 0
             recoil: 0
             damage_type: Physical
             accuracy: 0
@@ -159,7 +160,7 @@ fs3combat:
             penetration: 0
             weapon_type: Melee
             is_automatic: false
-            ammo: 0
+            # ammo: 0
             recoil: 0
             damage_type: Stun
             accuracy: 0
@@ -174,7 +175,7 @@ fs3combat:
             penetration: 0
             weapon_type: Melee
             is_automatic: false
-            ammo: 0
+            # ammo: 0
             recoil: 0
             damage_type: Physical
             accuracy: 0
@@ -185,10 +186,10 @@ fs3combat:
             description: "Knife"
             skill: Melee
             lethality: -5
-            penetration: 0
+            penetration: 2
             weapon_type: Melee
             is_automatic: false
-            ammo: 0
+            # ammo: 0
             recoil: 0
             damage_type: Physical
             accuracy: 0
@@ -199,7 +200,7 @@ fs3combat:
             description: "Stun gun"
             skill: Firearms
             lethality: 70
-            penetration: 0
+            penetration: 10
             weapon_type: Ranged
             is_automatic: false
             ammo: 5
@@ -213,10 +214,10 @@ fs3combat:
             description: "KEW Assault Cannon"
             skill: Gunnery
             lethality: 0
-            penetration: 20
+            penetration: 10
             weapon_type: Ranged
             is_automatic: false
-            ammo: 0
+            # ammo: 0
             recoil: 0
             damage_type: Physical
             accuracy: 0
@@ -230,7 +231,7 @@ fs3combat:
             penetration: 20
             weapon_type: Ranged
             is_automatic: false
-            ammo: 0
+            # ammo: 0
             recoil: 0
             damage_type: Physical
             accuracy: 0
@@ -244,7 +245,7 @@ fs3combat:
             penetration: 70
             weapon_type: Explosive
             is_automatic: false
-            ammo: 0
+            # ammo: 0
             recoil: 0
             damage_type: Physical
             accuracy: 0
@@ -252,14 +253,14 @@ fs3combat:
             reload_turns: 0
 
         Hmg:
-            description: "Heavy machinegun.  Assumes tripod."
+            description: "Heavy machinegun."
             skill: Firearms
             lethality: 0
             penetration: 8
             weapon_type: Ranged
             is_automatic: true
             ammo: 100
-            recoil: 1
+            recoil: 3
             damage_type: Physical
             accuracy: 0
             has_shrapnel: false
@@ -273,7 +274,7 @@ fs3combat:
             penetration: 250
             weapon_type: Explosive
             is_automatic: false
-            ammo: 0
+            # ammo: 0
             recoil: 0
             damage_type: Physical
             accuracy: 0
@@ -287,7 +288,7 @@ fs3combat:
             penetration: 0
             weapon_type: Suppressive
             is_automatic: false
-            ammo: 0
+            # ammo: 0
             recoil: 0
             damage_type: Physical
             accuracy: 0
@@ -309,7 +310,7 @@ fs3combat:
         Buckshot:
             description: "Shotgun pellets"
             accuracy: 3
-            penetration: 1
+            penetration: 0
         Boxing Gloves:
             description: "Padded sparring equipment"
             lethality: -20

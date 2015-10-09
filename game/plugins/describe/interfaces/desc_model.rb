@@ -44,13 +44,13 @@ module AresMUSH
     field :shortdesc, :type => String
 
     def zone_color
-      return "%xc" if self.zone == "Serve"
-      return "%xh%xc" if self.zone == "Gov"
-      return "%xm" if self.zone == "Relig"
-      return "%xh%xg" if self.zone == "Res"
-      return "%xg" if self.zone == "Lodge"
       return "%xh%xb" if self.zone == "Comm"
-      return "%xh%xy" if self.zone == "Rec"
+      return "%xh%xy" if self.zone == "Lodge"
+      return "%xh%xg" if self.zone == "Rec"
+      return "%xh%xc" if self.zone == "Serve"
+      return "%xm" if self.zone == "Relig"
+      return "%xh%xr" if self.zone == "Res"
+      return "%xh%xx" if self.zone == "OOC"
     end
   end
   

@@ -21,7 +21,7 @@ module AresMUSH
       end
 
       def check_zone
-        zones = ['Serve', 'Gov', 'Relig', 'Res', 'Lodge', 'Comm', 'Rec']
+        zones = ['Serve', 'Relig', 'Res', 'Lodge', 'Comm', 'Rec', 'Ooc']
         return t('rooms.zone_invalid') if !zones.include?(self.name)
         return nil
       end

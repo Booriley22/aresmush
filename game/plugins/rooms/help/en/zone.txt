@@ -4,11 +4,4 @@ The zone command sets the room's zoning.
 
 Valid zones are:
 
-    Serve
-    Gov
-    Relig
-    Res
-    Lodge
-    Comm
-    Rec
-
+%xh%xb [%xwComm%xb]%xw - Commercial%r%xn%xh%xb[space(7)]*%xn Shops, Markets, Banks, Casinos, places of Business.%r%xh%xb[space(7)]*%xn These places are open to the public, keep considerate of information provided on room desc -and- in the wiki. //Especially// if PC owned. Please contact those in a scene already before joining.%r%r%xh%xw%xy [%xwLodge%xy]%xw - Mass Residential%r%xn%xh%xy[space(7)]*%xn Lodgings such as Motels, Apartment Buildings, Mobile Home Parks, etc.%r%xh%xy[space(7)]*%xn These places are open to the public, keep considerate of information provided on room desc -and- in the wiki. These are%xh%xw hubs%xn for%xh%xr private residential%xn areas. Be mindful, please.%r%r%xh%xw%xg [%xwRec%xg]%xw - Public Area, Parks and Recreation%r%xn%xh%xg[space(7)]*%xn Streets, Parks, Wilderness and Outer Territories areas.%r%xh%xg[space(7)]*%xn These places are extremely open to the public. If RP is happening in these places it's an unrequired curtesy to check to see if it's alright if you join. But it is not a must. These places are big enough that many scenes can be going on at once in the same area. Try to have only open for all scenes in these places too.%r%xh%xw%r%xc [%xwServe%xc]%xw - Public Services%r%xn%xh%xc[space(7)]*%xn Library, School, Fire Department, Hospital, Police Service, Post Office, City Hall, and Courthouse.%r%xh%xc[space(7)]*%xn These places are open to the public, there will //always// be NPC workers and witnesses present in these places.%r%r%xh%xw%xn%xm [%xh%xwRelig%xn%xm]%xh%xw - Religious%r%xn%xm[space(7)]*%xn Church, Graveyard%r%xm[space(7)]*%xn These places are open to the public, keep considerate of information provided on room desc -and- in the wiki.%r%xh%xw%r%xr [%xwRes%xr]%xw - Residential%r%xn[space(7)]* Private homes, lofts, mobile homes, etc. Private Property.%r[space(7)]* Do%xh%xr not%xn join a scene without receiving permission to be there. Do not roam into these areas. If eRP (Erotic Role-play) is had, have it in these areas only.%r

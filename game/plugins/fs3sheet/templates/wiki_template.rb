@@ -28,7 +28,7 @@ module AresMUSH
         text << "%R%R"
         text << hooks
         text << "%R%R"
-        text << goals
+        text << goals        
         text << "%R%R"
         text << "+ IC Events%R"
         text << "[[include LogList name=#{name}]]"
@@ -49,7 +49,7 @@ module AresMUSH
         text << "%R%R"
         text << "+ Gallery%R"
         text << "[[gallery]]"
-
+        text
       end
       
       def name

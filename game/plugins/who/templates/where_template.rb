@@ -31,15 +31,24 @@ module AresMUSH
         self.online_chars.each do |char|
           room_name = Who.who_room_name(char)
           if (rooms.has_key?(room_name))
-            rooms[room_name][:chars] << char.name
+            rooms[room_name][:chars] << format_where_name(char)
           else
             rooms[room_name] = 
-               { :chars => [ char.name ],
+               { :chars => [ format_where_name(char) ],
                   :color => char.room.zone_color }
           end
         end
         return rooms
       end
+
+     def format_where_name(char)
+       if (char.client.idle_secs < 7200)
+         char.name
+       else
+         time = TimeFormatter.format(char.client.idle_secs)
+         "%xh%xx#{char.name}%xn"
+       end
+     end
     end
   end
 end

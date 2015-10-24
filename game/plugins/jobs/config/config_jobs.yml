@@ -37,4 +37,4 @@ jobs:
     
     # Set to true to report unexpected code errors as jobs, false to not.
     # You only want this 'false' when you're in development mode; otherwise leave it true.
-    report_errors: false
+    report_errors: true

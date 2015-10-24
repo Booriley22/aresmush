@@ -30,7 +30,7 @@ module AresMUSH
         text << "%R%R"
         text << goals        
         text << "%R%R"
-        text << "+ IC Events%R"
+        text << "+ Logs%R"
         text << "[[include LogList name=#{name}]]"
         text << "%R%R"
         text << "+ Relationships%R"

@@ -29,6 +29,8 @@ module AresMUSH
      def active_rooms
         rooms = {}
         self.online_chars.each do |char|
+         # Slight race condition between the time we built the list and here.
+         next if !char.client
           room_name = Who.who_room_name(char)
           if (rooms.has_key?(room_name))
             rooms[room_name][:chars] << format_where_name(char)
